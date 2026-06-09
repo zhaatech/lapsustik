@@ -3,10 +3,10 @@
     "title": "Lapas Narkotika Jayapura",
     "subtitle": "KEMENKUMHAM RI",
     "tagline": "Mewujudkan Pemasyarakatan yang PASTI dan Berintegritas",
-    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2007, Lapas ini memiliki kapasitas 308 orang namun saat ini menampung lebih dari 600 warga binaan, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
+    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial bagi warga binaan pemasyarakatan kasus narkotika dengan menjunjung tinggi nilai integritas, transparansi, dan pelayanan publik yang prima.",
     "footerDesc": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura — Mewujudkan pemasyarakatan yang PASTI dan berintegritas.",
-    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil Kemenkumham Papua. All rights reserved.",
-    "copyrightSub": "Direktorat Jenderal Pemasyarakatan — Kementerian Hukum dan HAM RI"
+    "copyright": "© 2024 Lapas Narkotika Kelas IIA Jayapura. Kemenkumham RI. All rights reserved.",
+    "copyrightSub": "Ditjen Pemasyarakatan — Kementerian Hukum dan HAM RI"
   },
   "nav": [
     { "label": "Beranda", "href": "#beranda" },
@@ -19,7 +19,7 @@
     { "label": "Kontak", "href": "#kontak" }
   ],
   "hero": {
-    "badge": "Kementerian Hukum dan HAM RI",
+    "badge": "Kementerian Hukum dan Ham RI",
     "title": "Lapas Narkotika",
     "titleHighlight": "Jayapura",
     "tagline": "Mewujudkan Pemasyarakatan yang",
@@ -35,7 +35,7 @@
   "stats": [
     {
       "icon": "users",
-      "value": 631,
+      "value": 487,
       "suffix": "+",
       "label": "Warga Binaan",
       "active": false
@@ -48,7 +48,7 @@
       "active": true
     },
     {
-      "icon": "phone",
+      "icon": "alert",
       "value": 12,
       "suffix": "",
       "label": "Layanan Publik",
@@ -75,7 +75,7 @@
     "titleHighlight": "Kelas IIA Jayapura",
     "paragraphs": [
       "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura merupakan unit pelaksana teknis di bawah Kementerian Hukum dan HAM Republik Indonesia. Berdiri sejak tahun 2007, kami berperan strategis dalam pembinaan, rehabilitasi, dan reintegrasi sosial bagi warga binaan pemasyarakatan tindak pidana narkotika di wilayah Papua.",
-      "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, dengan kapasitas tampung 308 orang namun saat ini melayani lebih dari 630 warga binaan, mayoritas kasus narkotika jenis ganja. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
+      "Berlokasi di Distrik Doyo, Kabupaten Jayapura, kami beroperasi dengan kapasitas modern, sistem keamanan terintegrasi, dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
     ],
     "images": [
       "https://images.pexels.com/photos/4328661/pexels-photo-4328661.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=700",
@@ -214,15 +214,15 @@
     "title": "Struktur",
     "titleHighlight": "Organisasi",
     "pimpinan": {
-      "inisial": "JEM",
-      "nama": "Jimreves Engel Stender Muloke",
+      "inisial": "SP",
+      "nama": "Drs. H. Suparman, Bc.IP., M.Si.",
       "jabatan": "Kepala Lapas Narkotika Kelas IIA Jayapura",
-      "deskripsi": "Memimpin Lapas Narkotika Jayapura dengan komitmen pada pelayanan publik prima, integritas, dan reformasi birokrasi berkelanjutan. Berdasarkan berita online, nama ini tercantum sebagai Kepala Lapas Narkotika Jayapura pada tahun 2025."
+      "deskripsi": "Memimpin Lapas Narkotika Jayapura dengan komitmen pada pelayanan publik prima, integritas, dan reformasi birokrasi berkelanjutan."
     },
     "struktural": [
       {
-        "inisial": "BW",
-        "nama": "Basuki Wijoyo, S.H., M.H.",
+        "inisial": "AP",
+        "nama": "Dr. Andi Pratama, S.H., M.H.",
         "jabatan": "Kasubag Tata Usaha"
       },
       {
@@ -345,8 +345,8 @@
         "icon": "map-pin",
         "label": "Alamat",
         "lines": [
-          "Jl. Sentani-Depapre No. 90, Sentani Barat,",
-          "Kabupaten Jayapura, Papua 99352"
+          "Distrik Doyo, Kabupaten Jayapura,",
+          "Provinsi Papua, Indonesia 99352"
         ]
       },
       {
@@ -357,7 +357,7 @@
       {
         "icon": "mail",
         "label": "Email",
-        "lines": ["kanwilpapua@kemenkum.go.id", "lapasnarkotikajayapura@kemenkumham.go.id"]
+        "lines": ["lapasnarkotikajayapura@kemenkumham.go.id"]
       },
       {
         "icon": "clock",
