@@ -1,0 +1,2898 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lapas Narkotika Jayapura - Kemenkumham RI</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* ===== BASE ===== */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+            * {
+                font-family: "Inter", sans-serif;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                overflow-x: hidden;
+                transition:
+                    background-color 0.4s,
+                    color 0.4s;
+            }
+            ::-webkit-scrollbar {
+                width: 6px;
+            }
+            ::-webkit-scrollbar-track {
+                background: var(--bg-primary);
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #f59e0b55;
+                border-radius: 3px;
+            }
+            [x-cloak] {
+                display: none !important;
+            }
+
+            /* ===== THEME VARIABLES ===== */
+            :root {
+                --gold: #f59e0b;
+                --gold-dark: #d97706;
+                --gold-light: #fbbf24;
+            }
+
+            /* DARK MODE (default) */
+            body.dark {
+                --bg-primary: #0a0f1e;
+                --bg-secondary: #0d1323;
+                --bg-card: #111827;
+                --bg-card2: #0f1729;
+                --text-primary: #ffffff;
+                --text-secondary: #9ca3af;
+                --text-muted: #6b7280;
+                --border: rgba(255, 255, 255, 0.08);
+                --border-card: rgba(255, 255, 255, 0.1);
+                --nav-bg: rgba(10, 15, 30, 0.96);
+                --hero-gradient: radial-gradient(
+                    ellipse at 55% 40%,
+                    #182040 0%,
+                    #0a0f1e 65%
+                );
+                --card-gradient: linear-gradient(
+                    135deg,
+                    #111827 0%,
+                    #0f1729 100%
+                );
+                --input-bg: #070c1a;
+                --faq-border: #1e2a40;
+                --org-avatar-bg: linear-gradient(135deg, #1a2540, #0f1729);
+                --shadow-gold: rgba(245, 158, 11, 0.15);
+                --btn-secondary-border: rgba(255, 255, 255, 0.25);
+                --btn-secondary-color: #ffffff;
+                --particle-color: rgba(245, 158, 11, 0.5);
+            }
+
+            /* LIGHT MODE */
+            body.light {
+                --bg-primary: #f8f9fc;
+                --bg-secondary: #eef0f7;
+                --bg-card: #ffffff;
+                --bg-card2: #f1f3fa;
+                --text-primary: #0f172a;
+                --text-secondary: #475569;
+                --text-muted: #94a3b8;
+                --border: rgba(0, 0, 0, 0.07);
+                --border-card: rgba(0, 0, 0, 0.09);
+                --nav-bg: rgba(248, 249, 252, 0.96);
+                --hero-gradient: radial-gradient(
+                    ellipse at 55% 40%,
+                    #dde6ff 0%,
+                    #f0f3fb 65%
+                );
+                --card-gradient: linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #f5f7ff 100%
+                );
+                --input-bg: #f8f9fc;
+                --faq-border: #e2e8f0;
+                --org-avatar-bg: linear-gradient(135deg, #e0e7ff, #f0f3fb);
+                --shadow-gold: rgba(245, 158, 11, 0.2);
+                --btn-secondary-border: rgba(0, 0, 0, 0.2);
+                --btn-secondary-color: #0f172a;
+                --particle-color: rgba(245, 158, 11, 0.3);
+            }
+
+            body {
+                background-color: var(--bg-primary);
+                color: var(--text-primary);
+            }
+
+            /* ===== NAV ===== */
+            .nav-fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background-color: var(--nav-bg);
+                backdrop-filter: blur(14px);
+                border-bottom: 1px solid var(--border);
+                transition:
+                    background-color 0.4s,
+                    border-color 0.4s,
+                    box-shadow 0.4s;
+            }
+            .nav-scrolled {
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            }
+            .nav-link {
+                color: var(--text-primary);
+                transition: color 0.3s;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
+            }
+            .nav-link:hover {
+                color: var(--gold);
+            }
+
+            /* ===== BUTTONS ===== */
+            .btn-primary {
+                background-color: var(--gold);
+                color: #000;
+                font-weight: 700;
+                transition:
+                    background-color 0.3s,
+                    transform 0.2s,
+                    box-shadow 0.3s;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 28px;
+                border-radius: 12px;
+                font-size: 15px;
+                text-decoration: none;
+                border: none;
+                cursor: pointer;
+            }
+            .btn-primary:hover {
+                background-color: var(--gold-dark);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+            }
+            .btn-secondary {
+                background-color: transparent;
+                border: 1.5px solid var(--btn-secondary-border);
+                color: var(--btn-secondary-color);
+                font-weight: 600;
+                transition:
+                    border-color 0.3s,
+                    transform 0.2s,
+                    color 0.3s,
+                    box-shadow 0.3s;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 28px;
+                border-radius: 12px;
+                font-size: 15px;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .btn-secondary:hover {
+                border-color: var(--gold);
+                color: var(--gold);
+                transform: translateY(-2px);
+            }
+
+            /* ===== ICONS & CARDS ===== */
+            .icon-box {
+                background-color: var(--gold);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 52px;
+                height: 52px;
+                flex-shrink: 0;
+            }
+            .icon-box-sm {
+                background-color: rgba(245, 158, 11, 0.12);
+                border: 1px solid rgba(245, 158, 11, 0.28);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                flex-shrink: 0;
+            }
+            .divider-gold {
+                width: 60px;
+                height: 3px;
+                background: linear-gradient(to right, #f59e0b, #d97706);
+                border-radius: 2px;
+            }
+            .section-label {
+                color: var(--gold);
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+            }
+
+            .data-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border-card);
+                border-radius: 18px;
+                transition:
+                    transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+                    border-color 0.3s,
+                    box-shadow 0.35s;
+            }
+            .data-card:hover {
+                transform: translateY(-6px);
+                border-color: var(--gold);
+                box-shadow: 0 12px 40px var(--shadow-gold);
+            }
+            .data-card.active {
+                border-color: var(--gold);
+            }
+
+            .zone-card {
+                background: var(--card-gradient);
+                border: 1px solid var(--border-card);
+                border-radius: 16px;
+                padding: 28px;
+                transition:
+                    transform 0.35s cubic-bezier(0.22, 0.68, 0, 1.2),
+                    border-color 0.3s,
+                    box-shadow 0.35s;
+            }
+            .zone-card:hover {
+                border-color: var(--gold);
+                transform: translateY(-6px);
+                box-shadow: 0 12px 40px var(--shadow-gold);
+            }
+
+            /* ===== GALLERY ===== */
+            .gallery-filter-btn {
+                border: 1.5px solid var(--border-card);
+                border-radius: 999px;
+                padding: 8px 20px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s;
+                color: var(--text-primary);
+                background: transparent;
+            }
+            .gallery-filter-btn.active {
+                background-color: var(--gold);
+                border-color: var(--gold);
+                color: #000;
+                font-weight: 700;
+            }
+            .gallery-filter-btn:not(.active):hover {
+                border-color: var(--gold);
+                color: var(--gold);
+            }
+            .gallery-item {
+                overflow: hidden;
+                border-radius: 18px;
+            }
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition:
+                    transform 0.6s cubic-bezier(0.22, 0.68, 0, 1.2),
+                    filter 0.4s;
+            }
+            .gallery-item:hover img {
+                transform: scale(1.08);
+                filter: brightness(1.05);
+            }
+
+            /* ===== FAQ ===== */
+            .faq-item {
+                border: 1px solid var(--faq-border);
+                border-radius: 14px;
+                overflow: hidden;
+                transition:
+                    border-color 0.3s,
+                    box-shadow 0.3s;
+                background: var(--bg-card);
+            }
+            .faq-item:hover {
+                border-color: rgba(245, 158, 11, 0.4);
+                box-shadow: 0 4px 20px var(--shadow-gold);
+            }
+
+            /* ===== ORG ===== */
+            .org-avatar {
+                width: 80px;
+                height: 80px;
+                border-radius: 14px;
+                background: var(--org-avatar-bg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                font-weight: 800;
+                color: var(--gold);
+                border: 2px solid rgba(245, 158, 11, 0.35);
+            }
+            .org-avatar-sm {
+                width: 60px;
+                height: 60px;
+                border-radius: 12px;
+                background: var(--org-avatar-bg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 800;
+                color: var(--gold);
+                border: 2px solid rgba(245, 158, 11, 0.3);
+            }
+
+            /* ===== THEME TOGGLE ===== */
+            .theme-toggle {
+                width: 52px;
+                height: 28px;
+                border-radius: 999px;
+                border: 2px solid var(--gold);
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+                transition: background 0.4s;
+                display: flex;
+                align-items: center;
+                padding: 2px;
+            }
+            .theme-toggle-thumb {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background: var(--gold);
+                transition: transform 0.4s cubic-bezier(0.22, 0.68, 0, 1.2);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 11px;
+                flex-shrink: 0;
+            }
+            body.light .theme-toggle-thumb {
+                transform: translateX(24px);
+            }
+
+            /* ===== FOOTER ===== */
+            .footer-link {
+                color: var(--text-secondary);
+                transition: color 0.3s;
+                font-size: 14px;
+                text-decoration: none;
+                display: block;
+            }
+            .footer-link:hover {
+                color: var(--gold);
+            }
+
+            /* ===== INPUT ===== */
+            .form-input {
+                width: 100%;
+                background: var(--input-bg);
+                border: 1px solid var(--border-card);
+                border-radius: 12px;
+                padding: 12px 16px;
+                color: var(--text-primary);
+                font-size: 14px;
+                transition:
+                    border-color 0.3s,
+                    box-shadow 0.3s;
+                outline: none;
+            }
+            .form-input:focus {
+                border-color: var(--gold);
+                box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+            }
+            .form-input::placeholder {
+                color: var(--text-muted);
+            }
+            .form-label {
+                font-size: 13px;
+                color: var(--text-secondary);
+                margin-bottom: 5px;
+                display: block;
+                font-weight: 500;
+            }
+
+            /* ===== ANIMATIONS ===== */
+            /* Scroll-triggered */
+            .anim-fade {
+                opacity: 0;
+                transform: translateY(36px);
+                transition:
+                    opacity 0.75s ease,
+                    transform 0.75s ease;
+            }
+            .anim-left {
+                opacity: 0;
+                transform: translateX(-50px);
+                transition:
+                    opacity 0.75s ease,
+                    transform 0.75s ease;
+            }
+            .anim-right {
+                opacity: 0;
+                transform: translateX(50px);
+                transition:
+                    opacity 0.75s ease,
+                    transform 0.75s ease;
+            }
+            .anim-scale {
+                opacity: 0;
+                transform: scale(0.88);
+                transition:
+                    opacity 0.65s ease,
+                    transform 0.65s ease;
+            }
+            .anim-flip {
+                opacity: 0;
+                transform: rotateX(20deg) translateY(24px);
+                transition:
+                    opacity 0.7s ease,
+                    transform 0.7s ease;
+            }
+            .visible {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+
+            .d1 {
+                transition-delay: 0.05s;
+            }
+            .d2 {
+                transition-delay: 0.15s;
+            }
+            .d3 {
+                transition-delay: 0.25s;
+            }
+            .d4 {
+                transition-delay: 0.35s;
+            }
+            .d5 {
+                transition-delay: 0.45s;
+            }
+            .d6 {
+                transition-delay: 0.55s;
+            }
+            .d7 {
+                transition-delay: 0.65s;
+            }
+            .d8 {
+                transition-delay: 0.75s;
+            }
+
+            /* Pulse glow on gold badge */
+            @keyframes pulse-gold {
+                0%,
+                100% {
+                    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5);
+                }
+                50% {
+                    box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
+                }
+            }
+            .pulse-badge {
+                animation: pulse-gold 2.5s infinite;
+            }
+
+            /* Floating hero image */
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+            .hero-float {
+                animation: float 5s ease-in-out infinite;
+            }
+
+            /* Rotating glow ring */
+            @keyframes spin-slow {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .spin-slow {
+                animation: spin-slow 14s linear infinite;
+            }
+
+            /* Stat number shimmer */
+            @keyframes shimmer {
+                0% {
+                    background-position: -200% center;
+                }
+                100% {
+                    background-position: 200% center;
+                }
+            }
+            .stat-num {
+                font-size: 2.5rem;
+                font-weight: 900;
+                background: linear-gradient(
+                    90deg,
+                    #f59e0b 30%,
+                    #fbbf24 50%,
+                    #f59e0b 70%
+                );
+                background-size: 200% auto;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: shimmer 3s linear infinite;
+            }
+
+            /* Particle canvas */
+            #particles {
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                z-index: 0;
+            }
+
+            /* Typing cursor */
+            @keyframes blink {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+            .cursor {
+                display: inline-block;
+                width: 3px;
+                height: 1em;
+                background: var(--gold);
+                margin-left: 3px;
+                animation: blink 0.9s infinite;
+                vertical-align: middle;
+                border-radius: 2px;
+            }
+
+            /* Page-load hero entrance */
+            @keyframes heroIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .hero-enter {
+                animation: heroIn 0.9s ease forwards;
+            }
+            .hero-enter-1 {
+                animation: heroIn 0.9s 0.1s ease both;
+            }
+            .hero-enter-2 {
+                animation: heroIn 0.9s 0.25s ease both;
+            }
+            .hero-enter-3 {
+                animation: heroIn 0.9s 0.4s ease both;
+            }
+            .hero-enter-4 {
+                animation: heroIn 0.9s 0.55s ease both;
+            }
+            .hero-enter-5 {
+                animation: heroIn 0.9s 0.7s ease both;
+            }
+
+            /* Loading overlay */
+            #loader {
+                position: fixed;
+                inset: 0;
+                background: var(--bg-primary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+                transition: opacity 0.6s;
+            }
+            @keyframes loaderSpin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .loader-ring {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                border: 4px solid rgba(245, 158, 11, 0.15);
+                border-top-color: var(--gold);
+                animation: loaderSpin 0.9s linear infinite;
+            }
+
+            /* Wave divider */
+            .wave-divider svg {
+                display: block;
+            }
+
+            /* Mobile menu */
+            .mobile-menu {
+                background: var(--bg-card);
+                border-top: 1px solid var(--border);
+            }
+
+            /* Ripple on buttons */
+            .ripple-btn {
+                position: relative;
+                overflow: hidden;
+            }
+            .ripple-btn .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0);
+                animation: ripple-anim 0.6s linear;
+                pointer-events: none;
+            }
+            @keyframes ripple-anim {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+
+            /* Glowing border on hero image */
+            .hero-img-wrap {
+                position: relative;
+            }
+            .hero-img-wrap::before {
+                content: "";
+                position: absolute;
+                inset: -2px;
+                border-radius: 20px;
+                background: linear-gradient(
+                    135deg,
+                    #f59e0b44,
+                    transparent 60%,
+                    #f59e0b22
+                );
+                z-index: 0;
+            }
+            .hero-img-wrap > * {
+                position: relative;
+                z-index: 1;
+            }
+
+            /* Section backgrounds */
+            .section-dark {
+                background-color: var(--bg-primary);
+            }
+            .section-alt {
+                background-color: var(--bg-secondary);
+            }
+
+            /* Progress bar top */
+            #progress-bar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 3px;
+                background: linear-gradient(to right, #f59e0b, #fbbf24);
+                z-index: 9999;
+                transition: width 0.1s;
+                width: 0%;
+            }
+
+            /* Back to top */
+            #back-top {
+                position: fixed;
+                bottom: 28px;
+                right: 28px;
+                z-index: 999;
+                width: 46px;
+                height: 46px;
+                border-radius: 12px;
+                background: var(--gold);
+                color: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                opacity: 0;
+                transform: translateY(20px);
+                transition:
+                    opacity 0.4s,
+                    transform 0.4s,
+                    box-shadow 0.3s;
+                box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
+                border: none;
+            }
+            #back-top.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            #back-top:hover {
+                box-shadow: 0 8px 24px rgba(245, 158, 11, 0.6);
+                transform: translateY(-3px);
+            }
+
+            /* Toast */
+            #toast {
+                position: fixed;
+                bottom: 24px;
+                left: 50%;
+                transform: translateX(-50%) translateY(80px);
+                background: var(--gold);
+                color: #000;
+                font-weight: 700;
+                padding: 14px 28px;
+                border-radius: 14px;
+                box-shadow: 0 8px 30px rgba(245, 158, 11, 0.4);
+                z-index: 9998;
+                transition:
+                    transform 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
+                    opacity 0.5s;
+                opacity: 0;
+                white-space: nowrap;
+            }
+            #toast.show {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body class="dark" x-data="App()" x-init="init()">
+        <!-- Progress Bar -->
+        <div id="progress-bar"></div>
+
+        <!-- Loading Overlay -->
+        <div id="loader">
+            <div style="text-align: center">
+                <div class="loader-ring" style="margin: 0 auto 16px"></div>
+                <div
+                    style="
+                        color: var(--gold);
+                        font-size: 13px;
+                        font-weight: 700;
+                        letter-spacing: 0.15em;
+                    "
+                >
+                    MEMUAT DATA...
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+        <button
+            id="back-top"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+            title="Kembali ke atas"
+        >
+            <svg
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+            >
+                <polyline points="18 15 12 9 6 15" />
+            </svg>
+        </button>
+
+        <!-- Toast -->
+        <div id="toast">✓ Pesan berhasil dikirim!</div>
+
+        <!-- NAVBAR -->
+        <nav class="nav-fixed" id="navbar">
+            <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px">
+                <div
+                    style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 14px 0;
+                    "
+                >
+                    <!-- Logo -->
+                    <a
+                        href="#beranda"
+                        style="
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            text-decoration: none;
+                        "
+                    >
+                        <div
+                            style="
+                                width: 46px;
+                                height: 46px;
+                                border-radius: 12px;
+                                background: var(--gold);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                flex-shrink: 0;
+                            "
+                            class="pulse-badge"
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                            >
+                                <path
+                                    d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"
+                                    fill="#000"
+                                    opacity="0.85"
+                                />
+                                <path
+                                    d="M12 6L6 9.5v3.5c0 3.5 2.5 6.75 6 7.5 3.5-.75 6-4 6-7.5V9.5L12 6z"
+                                    fill="none"
+                                    stroke="#fff"
+                                    stroke-width="1.5"
+                                />
+                            </svg>
+                            <div
+                                style="
+                                    position: absolute;
+                                    top: -4px;
+                                    right: -4px;
+                                    width: 12px;
+                                    height: 12px;
+                                    background: #ef4444;
+                                    border-radius: 50%;
+                                    border: 2px solid var(--bg-primary);
+                                "
+                            ></div>
+                        </div>
+                        <div>
+                            <div
+                                x-text="s.site?.subtitle || ''"
+                                style="
+                                    font-size: 10px;
+                                    font-weight: 700;
+                                    color: var(--gold);
+                                    letter-spacing: 0.15em;
+                                    text-transform: uppercase;
+                                "
+                            ></div>
+                            <div
+                                x-text="s.site?.title || ''"
+                                style="
+                                    color: var(--text-primary);
+                                    font-weight: 800;
+                                    font-size: 16px;
+                                    line-height: 1.2;
+                                "
+                            ></div>
+                        </div>
+                    </a>
+                    <!-- Desktop Nav -->
+                    <div
+                        style="display: flex; align-items: center; gap: 28px"
+                        class="desktop-nav"
+                    >
+                        <template x-for="link in s.nav || []" :key="link.href">
+                            <a
+                                :href="link.href"
+                                x-text="link.label"
+                                class="nav-link"
+                            ></a>
+                        </template>
+                        <!-- Theme Toggle -->
+                        <button
+                            @click="toggleTheme()"
+                            class="theme-toggle"
+                            :title="isDark ? 'Switch to Light' : 'Switch to Dark'"
+                        >
+                            <div class="theme-toggle-thumb">
+                                <span
+                                    x-text="isDark ? '🌙' : '☀️'"
+                                    style="font-size: 12px; line-height: 1"
+                                ></span>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Mobile Controls -->
+                    <div
+                        style="display: flex; align-items: center; gap: 10px"
+                        class="mobile-controls"
+                    >
+                        <button
+                            @click="toggleTheme()"
+                            class="theme-toggle"
+                            style="width: 42px; height: 24px"
+                        >
+                            <div
+                                class="theme-toggle-thumb"
+                                style="
+                                    width: 17px;
+                                    height: 17px;
+                                    font-size: 10px;
+                                "
+                            >
+                                <span x-text="isDark ? '🌙' : '☀️'"></span>
+                            </div>
+                        </button>
+                        <button
+                            @click="mobileOpen = !mobileOpen"
+                            style="
+                                background: none;
+                                border: none;
+                                color: var(--text-primary);
+                                cursor: pointer;
+                                padding: 4px;
+                            "
+                        >
+                            <svg
+                                width="24"
+                                height="24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    x-show="!mobileOpen"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                                <path
+                                    x-show="mobileOpen"
+                                    x-cloak
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div
+                x-show="mobileOpen"
+                x-cloak
+                class="mobile-menu"
+                style="
+                    padding: 12px 24px 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                "
+            >
+                <template x-for="link in s.nav || []" :key="link.href">
+                    <a
+                        :href="link.href"
+                        x-text="link.label"
+                        @click="mobileOpen=false"
+                        class="nav-link"
+                        style="
+                            padding: 6px 0;
+                            border-bottom: 1px solid var(--border);
+                        "
+                    ></a>
+                </template>
+            </div>
+        </nav>
+
+        <!-- PARTICLE CANVAS -->
+        <canvas
+            id="particles"
+            style="position: fixed; inset: 0; pointer-events: none; z-index: 1"
+        ></canvas>
+
+        <!-- ======================== HERO ======================== -->
+        <section
+            id="beranda"
+            style="
+                position: relative;
+                min-height: 100vh;
+                background: var(--hero-gradient);
+                display: flex;
+                align-items: center;
+                padding-top: 80px;
+                overflow: hidden;
+            "
+        >
+            <!-- Decorative rings -->
+            <div
+                style="
+                    position: absolute;
+                    top: 50%;
+                    left: -120px;
+                    width: 500px;
+                    height: 500px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(245, 158, 11, 0.08);
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                "
+            ></div>
+            <div
+                style="
+                    position: absolute;
+                    top: 50%;
+                    left: -80px;
+                    width: 350px;
+                    height: 350px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(245, 158, 11, 0.06);
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                "
+                class="spin-slow"
+            ></div>
+
+            <div
+                style="
+                    max-width: 1280px;
+                    margin: 0 auto;
+                    padding: 80px 24px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 60px;
+                    align-items: center;
+                    width: 100%;
+                    position: relative;
+                    z-index: 2;
+                "
+            >
+                <!-- Left -->
+                <div>
+                    <div
+                        class="hero-enter-1"
+                        style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 8px;
+                            border: 1px solid rgba(245, 158, 11, 0.4);
+                            border-radius: 999px;
+                            padding: 8px 18px;
+                            margin-bottom: 28px;
+                            background: rgba(245, 158, 11, 0.05);
+                        "
+                    >
+                        <div
+                            style="
+                                width: 8px;
+                                height: 8px;
+                                border-radius: 50%;
+                                background: var(--gold);
+                            "
+                            class="pulse-badge"
+                        ></div>
+                        <span
+                            x-text="s.hero?.badge || ''"
+                            style="
+                                font-size: 11px;
+                                font-weight: 700;
+                                letter-spacing: 0.18em;
+                                text-transform: uppercase;
+                                color: var(--text-primary);
+                            "
+                        ></span>
+                    </div>
+                    <h1
+                        class="hero-enter-2"
+                        style="
+                            font-size: clamp(2.8rem, 5vw, 4rem);
+                            font-weight: 900;
+                            line-height: 1.1;
+                            margin-bottom: 16px;
+                        "
+                    >
+                        <span
+                            x-text="s.hero?.title || ''"
+                            style="color: var(--text-primary); display: block"
+                        ></span>
+                        <span
+                            x-text="s.hero?.titleHighlight || ''"
+                            style="color: var(--gold); display: block"
+                        ></span>
+                    </h1>
+                    <p
+                        class="hero-enter-3"
+                        style="
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: var(--text-primary);
+                            margin-bottom: 8px;
+                        "
+                    >
+                        <span x-text="(s.hero?.tagline || '') + ' '"></span
+                        ><span
+                            x-text="s.hero?.taglineHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span
+                        ><span
+                            x-text="' ' + (s.hero?.taglineSuffix || '')"
+                        ></span>
+                    </p>
+                    <div
+                        class="divider-gold hero-enter-3"
+                        style="margin-bottom: 24px"
+                    ></div>
+                    <p
+                        class="hero-enter-4"
+                        x-text="s.hero?.description || ''"
+                        style="
+                            color: var(--text-secondary);
+                            line-height: 1.75;
+                            max-width: 520px;
+                            margin-bottom: 36px;
+                            font-size: 15px;
+                        "
+                    ></p>
+                    <div
+                        class="hero-enter-5"
+                        style="display: flex; flex-wrap: wrap; gap: 14px"
+                    >
+                        <a
+                            :href="s.hero?.ctaPrimary?.href || '#'"
+                            class="btn-primary ripple-btn"
+                            @click="ripple($event)"
+                        >
+                            <span
+                                x-text="s.hero?.ctaPrimary?.label || ''"
+                            ></span>
+                            <svg
+                                width="18"
+                                height="18"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                            >
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a
+                            :href="s.hero?.ctaSecondary?.href || '#'"
+                            class="btn-secondary ripple-btn"
+                            @click="ripple($event)"
+                        >
+                            <svg
+                                width="18"
+                                height="18"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"
+                                />
+                            </svg>
+                            <span
+                                x-text="s.hero?.ctaSecondary?.label || ''"
+                            ></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="hero-float hero-enter-2" style="position: relative">
+                    <div class="hero-img-wrap">
+                        <div
+                            style="
+                                border-radius: 20px;
+                                overflow: hidden;
+                                aspect-ratio: 4/3;
+                            "
+                        >
+                            <img
+                                :src="s.hero?.heroImage || ''"
+                                :alt="s.hero?.titleHighlight || ''"
+                                style="
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                "
+                            />
+                            <div
+                                style="
+                                    position: absolute;
+                                    inset: 0;
+                                    background: linear-gradient(
+                                        to top,
+                                        rgba(0, 0, 0, 0.35),
+                                        transparent
+                                    );
+                                    border-radius: 20px;
+                                    pointer-events: none;
+                                "
+                            ></div>
+                        </div>
+                        <!-- Badge overlay -->
+                        <div
+                            style="
+                                position: absolute;
+                                bottom: 20px;
+                                left: 20px;
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                background: rgba(0, 0, 0, 0.65);
+                                backdrop-filter: blur(8px);
+                                padding: 12px 18px;
+                                border-radius: 14px;
+                                border: 1px solid rgba(245, 158, 11, 0.25);
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 36px;
+                                    height: 36px;
+                                    border-radius: 10px;
+                                    background: var(--gold);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-shrink: 0;
+                                "
+                            >
+                                <svg
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"
+                                        fill="#000"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <div
+                                    x-text="s.hero?.heroBadgeLabel || ''"
+                                    style="
+                                        font-size: 10px;
+                                        font-weight: 700;
+                                        color: var(--gold);
+                                        letter-spacing: 0.15em;
+                                        text-transform: uppercase;
+                                    "
+                                ></div>
+                                <div
+                                    x-text="s.hero?.heroBadgeText || ''"
+                                    style="
+                                        color: #fff;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    "
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative dot grid -->
+                    <div
+                        style="
+                            position: absolute;
+                            top: -20px;
+                            right: -20px;
+                            width: 80px;
+                            height: 80px;
+                            opacity: 0.3;
+                            background-image: radial-gradient(
+                                circle,
+                                var(--gold) 1.5px,
+                                transparent 1.5px
+                            );
+                            background-size: 12px 12px;
+                        "
+                    ></div>
+                    <div
+                        style="
+                            position: absolute;
+                            bottom: -20px;
+                            left: -20px;
+                            width: 60px;
+                            height: 60px;
+                            opacity: 0.2;
+                            background-image: radial-gradient(
+                                circle,
+                                var(--gold) 1.5px,
+                                transparent 1.5px
+                            );
+                            background-size: 10px 10px;
+                        "
+                    ></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== STATS ======================== -->
+        <section class="section-alt" style="padding: 80px 24px">
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        gap: 16px;
+                    "
+                    class="stats-grid"
+                >
+                    <template x-for="(stat, i) in s.stats || []" :key="i">
+                        <div
+                            class="data-card anim-fade"
+                            :class="['d'+(i+1), stat.active ? 'active' : '']"
+                            style="padding: 28px"
+                        >
+                            <div
+                                class="icon-box-sm"
+                                style="margin-bottom: 16px"
+                            >
+                                <span
+                                    x-html="getIcon(stat.icon)"
+                                    style="color: var(--gold)"
+                                ></span>
+                            </div>
+                            <div class="stat-num" style="margin-bottom: 4px">
+                                <span class="counter" :data-target="stat.value"
+                                    >0</span
+                                ><span x-text="stat.suffix || ''"></span>
+                            </div>
+                            <div
+                                x-text="stat.label"
+                                style="
+                                    color: var(--text-secondary);
+                                    font-size: 13px;
+                                    font-weight: 500;
+                                    line-height: 1.4;
+                                "
+                            ></div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== PROFIL ======================== -->
+        <section id="profil" class="section-dark" style="padding: 96px 24px">
+            <div
+                style="
+                    max-width: 1280px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 64px;
+                    align-items: center;
+                "
+            >
+                <!-- Images -->
+                <div
+                    class="anim-left"
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 14px;
+                    "
+                >
+                    <template
+                        x-for="(img, i) in s.profil?.images || []"
+                        :key="i"
+                    >
+                        <div
+                            :class="i===0 ? 'gallery-item' : 'gallery-item'"
+                            :style="i===0 ? 'grid-column:1/-1;height:200px;' : 'height:170px;'"
+                        >
+                            <img :src="img" :alt="s.profil?.title || ''" />
+                        </div>
+                    </template>
+                </div>
+                <!-- Text -->
+                <div class="anim-right">
+                    <div
+                        class="section-label"
+                        style="margin-bottom: 10px"
+                        x-text="s.profil?.sectionLabel || ''"
+                    ></div>
+                    <h2
+                        style="
+                            font-size: clamp(2rem, 3.5vw, 2.8rem);
+                            font-weight: 900;
+                            line-height: 1.15;
+                            margin-bottom: 24px;
+                            color: var(--text-primary);
+                        "
+                    >
+                        <span x-text="(s.profil?.title || '') + ' '"></span
+                        ><span
+                            x-text="s.profil?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <template x-for="p in s.profil?.paragraphs || []" :key="p">
+                        <p
+                            x-text="p"
+                            style="
+                                color: var(--text-secondary);
+                                line-height: 1.8;
+                                margin-bottom: 18px;
+                                font-size: 15px;
+                            "
+                        ></p>
+                    </template>
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 12px;
+                            margin-top: 28px;
+                        "
+                    >
+                        <template
+                            x-for="card in s.profil?.infoCards || []"
+                            :key="card.label"
+                        >
+                            <div class="data-card" style="padding: 16px">
+                                <div
+                                    class="icon-box-sm"
+                                    style="
+                                        margin-bottom: 10px;
+                                        width: 36px;
+                                        height: 36px;
+                                    "
+                                >
+                                    <span
+                                        x-html="getIcon(card.icon)"
+                                        style="color: var(--gold)"
+                                    ></span>
+                                </div>
+                                <div
+                                    x-text="card.label"
+                                    style="
+                                        font-size: 10px;
+                                        font-weight: 700;
+                                        color: var(--text-muted);
+                                        letter-spacing: 0.12em;
+                                        text-transform: uppercase;
+                                        margin-bottom: 4px;
+                                    "
+                                ></div>
+                                <div
+                                    x-text="card.value"
+                                    style="
+                                        font-weight: 700;
+                                        color: var(--text-primary);
+                                        font-size: 14px;
+                                    "
+                                ></div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== VISI MISI ======================== -->
+        <section class="section-alt" style="padding: 96px 24px">
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div
+                    class="anim-fade"
+                    style="text-align: center; margin-bottom: 56px"
+                >
+                    <div
+                        class="section-label"
+                        style="margin-bottom: 10px"
+                        x-text="s.visiMisi?.sectionLabel || ''"
+                    ></div>
+                    <h2
+                        style="
+                            font-size: clamp(2.2rem, 4vw, 3rem);
+                            font-weight: 900;
+                            color: var(--text-primary);
+                        "
+                    >
+                        <span x-text="(s.visiMisi?.title || '') + ' '"></span
+                        ><span
+                            x-text="s.visiMisi?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <div class="divider-gold" style="margin: 16px auto 0"></div>
+                </div>
+                <!-- Visi -->
+                <div
+                    class="anim-fade d1"
+                    style="
+                        background: var(--card-gradient);
+                        border: 1px solid var(--border-card);
+                        border-radius: 20px;
+                        padding: 36px;
+                        margin-bottom: 24px;
+                    "
+                >
+                    <div
+                        style="
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 20px;
+                        "
+                    >
+                        <div class="icon-box" style="flex-shrink: 0">
+                            <svg
+                                width="26"
+                                height="26"
+                                fill="none"
+                                stroke="#000"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                                />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <div
+                                class="section-label"
+                                style="margin-bottom: 10px"
+                            >
+                                VISI
+                            </div>
+                            <p
+                                x-text="s.visiMisi?.visi || ''"
+                                style="
+                                    font-size: clamp(1rem, 1.8vw, 1.25rem);
+                                    font-weight: 700;
+                                    color: var(--text-primary);
+                                    line-height: 1.65;
+                                "
+                            ></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Misi Grid -->
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 14px;
+                    "
+                    class="misi-grid"
+                >
+                    <template x-for="(m, i) in s.visiMisi?.misi || []" :key="i">
+                        <div
+                            class="data-card anim-flip"
+                            :class="'d'+(i+1)"
+                            style="padding: 24px"
+                        >
+                            <div class="icon-box" style="margin-bottom: 16px">
+                                <span
+                                    x-html="getIcon(m.icon)"
+                                    style="color: #000"
+                                ></span>
+                            </div>
+                            <div
+                                x-text="m.label"
+                                style="
+                                    font-size: 10px;
+                                    font-weight: 700;
+                                    color: var(--gold);
+                                    letter-spacing: 0.15em;
+                                    margin-bottom: 8px;
+                                "
+                            ></div>
+                            <p
+                                x-text="m.text"
+                                style="
+                                    color: var(--text-secondary);
+                                    font-size: 13px;
+                                    line-height: 1.65;
+                                "
+                            ></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== TUGAS & FUNGSI ======================== -->
+        <section id="layanan" class="section-dark" style="padding: 96px 24px">
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div class="anim-fade" style="margin-bottom: 56px">
+                    <div
+                        class="section-label"
+                        style="margin-bottom: 10px"
+                        x-text="s.tugasFungsi?.sectionLabel || ''"
+                    ></div>
+                    <h2
+                        style="
+                            font-size: clamp(2.2rem, 4vw, 3rem);
+                            font-weight: 900;
+                            color: var(--text-primary);
+                            margin-bottom: 8px;
+                        "
+                    >
+                        <span x-text="(s.tugasFungsi?.title || '') + ' '"></span
+                        ><span
+                            x-text="s.tugasFungsi?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <div class="divider-gold" style="margin-bottom: 20px"></div>
+                    <p
+                        x-text="s.tugasFungsi?.subtitle || ''"
+                        style="
+                            color: var(--text-secondary);
+                            max-width: 540px;
+                            font-size: 15px;
+                            line-height: 1.7;
+                        "
+                    ></p>
+                </div>
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 16px;
+                    "
+                    class="tugas-grid"
+                >
+                    <template
+                        x-for="(item, i) in s.tugasFungsi?.items || []"
+                        :key="i"
+                    >
+                        <div
+                            class="data-card anim-scale"
+                            :class="['d'+(i%4+1), item.highlight ? 'active' : '']"
+                            style="padding: 28px"
+                        >
+                            <div class="icon-box" style="margin-bottom: 20px">
+                                <span
+                                    x-html="getIcon(item.icon)"
+                                    style="color: #000"
+                                ></span>
+                            </div>
+                            <h3
+                                x-text="item.title"
+                                style="
+                                    font-weight: 700;
+                                    color: var(--text-primary);
+                                    margin-bottom: 10px;
+                                    font-size: 16px;
+                                "
+                            ></h3>
+                            <p
+                                x-text="item.desc"
+                                style="
+                                    color: var(--text-secondary);
+                                    font-size: 13px;
+                                    line-height: 1.65;
+                                "
+                            ></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== ZONA INTEGRITAS ======================== -->
+        <section id="zona" class="section-alt" style="padding: 96px 24px">
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div
+                    class="anim-fade"
+                    style="text-align: center; margin-bottom: 56px"
+                >
+                    <div
+                        class="section-label"
+                        style="margin-bottom: 10px"
+                        x-text="s.zonaIntegritas?.sectionLabel || ''"
+                    ></div>
+                    <h2
+                        style="
+                            font-size: clamp(2.2rem, 4vw, 3rem);
+                            font-weight: 900;
+                            color: var(--text-primary);
+                            margin-bottom: 16px;
+                        "
+                    >
+                        <span
+                            x-text="(s.zonaIntegritas?.title || '') + ' '"
+                        ></span
+                        ><span
+                            x-text="s.zonaIntegritas?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <div class="divider-gold" style="margin: 0 auto 20px"></div>
+                    <p
+                        x-text="s.zonaIntegritas?.subtitle || ''"
+                        style="
+                            color: var(--text-secondary);
+                            max-width: 640px;
+                            margin: 0 auto;
+                            font-size: 15px;
+                            line-height: 1.75;
+                        "
+                    ></p>
+                </div>
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        gap: 14px;
+                    "
+                    class="zona-grid"
+                >
+                    <template
+                        x-for="(item, i) in s.zonaIntegritas?.items || []"
+                        :key="i"
+                    >
+                        <div class="zone-card anim-fade" :class="'d'+(i+1)">
+                            <div class="icon-box" style="margin-bottom: 20px">
+                                <span
+                                    x-html="getIcon(item.icon)"
+                                    style="color: #000"
+                                ></span>
+                            </div>
+                            <div
+                                x-text="item.tag"
+                                style="
+                                    font-size: 10px;
+                                    font-weight: 700;
+                                    color: var(--gold);
+                                    letter-spacing: 0.18em;
+                                    text-transform: uppercase;
+                                    margin-bottom: 8px;
+                                "
+                            ></div>
+                            <h3
+                                x-text="item.title"
+                                style="
+                                    font-weight: 700;
+                                    color: var(--text-primary);
+                                    margin-bottom: 12px;
+                                    font-size: 15px;
+                                    line-height: 1.3;
+                                "
+                            ></h3>
+                            <p
+                                x-text="item.desc"
+                                style="
+                                    color: var(--text-secondary);
+                                    font-size: 13px;
+                                    line-height: 1.65;
+                                "
+                            ></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== STRUKTUR ORGANISASI ======================== -->
+        <section id="informasi" class="section-dark" style="padding: 96px 24px">
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div class="anim-fade" style="margin-bottom: 48px">
+                    <h2
+                        style="
+                            font-size: clamp(2.2rem, 4vw, 3rem);
+                            font-weight: 900;
+                            color: var(--text-primary);
+                            margin-bottom: 8px;
+                        "
+                    >
+                        <span x-text="(s.organisasi?.title || '') + ' '"></span
+                        ><span
+                            x-text="s.organisasi?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <div class="divider-gold"></div>
+                </div>
+                <!-- Pimpinan -->
+                <div
+                    class="anim-fade d1"
+                    style="
+                        background: var(--card-gradient);
+                        border: 1px solid var(--border-card);
+                        border-radius: 20px;
+                        padding: 32px;
+                        margin-bottom: 36px;
+                    "
+                >
+                    <div
+                        style="
+                            display: flex;
+                            align-items: center;
+                            gap: 24px;
+                            flex-wrap: wrap;
+                        "
+                    >
+                        <div
+                            class="org-avatar"
+                            style="background: var(--org-avatar-bg)"
+                        >
+                            <span
+                                x-text="s.organisasi?.pimpinan?.inisial || ''"
+                            ></span>
+                        </div>
+                        <div style="flex: 1; min-width: 200px">
+                            <div
+                                style="
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 8px;
+                                    margin-bottom: 8px;
+                                "
+                            >
+                                <svg
+                                    width="14"
+                                    height="14"
+                                    fill="var(--gold)"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                                    />
+                                </svg>
+                                <span
+                                    style="
+                                        font-size: 10px;
+                                        font-weight: 700;
+                                        color: var(--gold);
+                                        letter-spacing: 0.18em;
+                                        text-transform: uppercase;
+                                    "
+                                    >PIMPINAN</span
+                                >
+                            </div>
+                            <h3
+                                x-text="s.organisasi?.pimpinan?.nama || ''"
+                                style="
+                                    font-size: 1.5rem;
+                                    font-weight: 900;
+                                    color: var(--text-primary);
+                                    margin-bottom: 4px;
+                                "
+                            ></h3>
+                            <p
+                                x-text="s.organisasi?.pimpinan?.jabatan || ''"
+                                style="
+                                    color: var(--gold);
+                                    font-weight: 600;
+                                    margin-bottom: 10px;
+                                    font-size: 14px;
+                                "
+                            ></p>
+                            <p
+                                x-text="s.organisasi?.pimpinan?.deskripsi || ''"
+                                style="
+                                    color: var(--text-secondary);
+                                    font-size: 14px;
+                                    line-height: 1.7;
+                                    max-width: 520px;
+                                "
+                            ></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Struktural label -->
+                <div
+                    style="
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        margin-bottom: 20px;
+                    "
+                    class="anim-fade d2"
+                >
+                    <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="var(--gold)"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                    >
+                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                        <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                    </svg>
+                    <span
+                        style="
+                            font-size: 10px;
+                            font-weight: 700;
+                            color: var(--gold);
+                            letter-spacing: 0.18em;
+                            text-transform: uppercase;
+                        "
+                        >PEJABAT STRUKTURAL</span
+                    >
+                </div>
+                <!-- Struktural Grid -->
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 14px;
+                    "
+                    class="struktural-grid"
+                >
+                    <template
+                        x-for="(pj, i) in s.organisasi?.struktural || []"
+                        :key="i"
+                    >
+                        <div
+                            class="data-card anim-scale"
+                            :class="'d'+(i%4+1)"
+                            style="padding: 20px"
+                        >
+                            <div
+                                class="org-avatar-sm"
+                                style="margin-bottom: 14px"
+                            >
+                                <span x-text="pj.inisial"></span>
+                            </div>
+                            <h4
+                                x-text="pj.nama"
+                                style="
+                                    font-weight: 700;
+                                    color: var(--text-primary);
+                                    font-size: 13px;
+                                    margin-bottom: 4px;
+                                    line-height: 1.4;
+                                "
+                            ></h4>
+                            <p
+                                x-text="pj.jabatan"
+                                style="
+                                    color: var(--text-muted);
+                                    font-size: 12px;
+                                "
+                            ></p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== GALERI ======================== -->
+        <section
+            id="galeri"
+            class="section-alt"
+            style="padding: 96px 24px"
+            x-data="{ activeFilter: 'Semua' }"
+        >
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div
+                    style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 48px;
+                        align-items: flex-end;
+                        margin-bottom: 40px;
+                    "
+                >
+                    <div class="anim-left">
+                        <div
+                            class="section-label"
+                            style="margin-bottom: 10px"
+                            x-text="s.galeri?.sectionLabel || ''"
+                        ></div>
+                        <h2
+                            style="
+                                font-size: clamp(2.2rem, 4vw, 3rem);
+                                font-weight: 900;
+                                color: var(--text-primary);
+                                margin-bottom: 8px;
+                            "
+                        >
+                            <span x-text="(s.galeri?.title || '') + ' '"></span
+                            ><span
+                                x-text="s.galeri?.titleHighlight || ''"
+                                style="color: var(--gold)"
+                            ></span>
+                        </h2>
+                        <div class="divider-gold"></div>
+                    </div>
+                    <p
+                        class="anim-right"
+                        x-text="s.galeri?.subtitle || ''"
+                        style="
+                            color: var(--text-secondary);
+                            max-width: 300px;
+                            font-size: 14px;
+                            line-height: 1.7;
+                            flex: 1;
+                            min-width: 200px;
+                        "
+                    ></p>
+                </div>
+                <!-- Filters -->
+                <div
+                    style="
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        margin-bottom: 32px;
+                    "
+                    class="anim-fade"
+                >
+                    <template x-for="f in s.galeri?.filters || []" :key="f">
+                        <button
+                            @click="activeFilter = f"
+                            :class="activeFilter === f ? 'active' : ''"
+                            class="gallery-filter-btn"
+                            x-text="f"
+                        ></button>
+                    </template>
+                </div>
+                <!-- Gallery Grid -->
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 16px;
+                    "
+                    class="gallery-grid"
+                >
+                    <template
+                        x-for="(item, i) in s.galeri?.items || []"
+                        :key="i"
+                    >
+                        <div
+                            class="gallery-item anim-scale"
+                            :class="'d'+(i%3+1)"
+                            :style="(activeFilter === 'Semua' || item.category === activeFilter) ? 'height:260px;display:block;' : 'display:none;'"
+                            style="height: 260px"
+                        >
+                            <img :src="item.src" :alt="item.alt" />
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== FAQ ======================== -->
+        <section id="faq" class="section-dark" style="padding: 96px 24px">
+            <div style="max-width: 860px; margin: 0 auto">
+                <div
+                    class="anim-fade"
+                    style="text-align: center; margin-bottom: 56px"
+                >
+                    <div
+                        style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 8px;
+                            margin-bottom: 10px;
+                        "
+                    >
+                        <svg
+                            width="16"
+                            height="16"
+                            fill="none"
+                            stroke="var(--gold)"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        <span
+                            class="section-label"
+                            x-text="s.faq?.sectionLabel || ''"
+                        ></span>
+                    </div>
+                    <h2
+                        style="
+                            font-size: clamp(2rem, 4vw, 2.8rem);
+                            font-weight: 900;
+                            color: var(--text-primary);
+                        "
+                    >
+                        <span x-text="(s.faq?.title || '') + ' '"></span
+                        ><span
+                            x-text="s.faq?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <div class="divider-gold" style="margin: 16px auto 0"></div>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; gap: 10px"
+                    x-data="{ openFaq: null }"
+                >
+                    <template x-for="(item, i) in s.faq?.items || []" :key="i">
+                        <div class="faq-item anim-fade" :class="'d'+(i%3+1)">
+                            <button
+                                @click="openFaq = openFaq === i ? null : i"
+                                style="
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    padding: 20px 24px;
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    text-align: left;
+                                    gap: 16px;
+                                "
+                            >
+                                <span
+                                    x-text="item.question"
+                                    style="
+                                        font-weight: 600;
+                                        font-size: 15px;
+                                        color: var(--text-primary);
+                                    "
+                                ></span>
+                                <svg
+                                    :style="openFaq === i ? 'transform:rotate(180deg)' : ''"
+                                    style="
+                                        transition: transform 0.35s;
+                                        flex-shrink: 0;
+                                    "
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="var(--gold)"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </button>
+                            <div
+                                x-show="openFaq === i"
+                                x-collapse
+                                style="padding: 0 24px 20px"
+                            >
+                                <p
+                                    x-text="item.answer"
+                                    style="
+                                        color: var(--text-secondary);
+                                        font-size: 14px;
+                                        line-height: 1.75;
+                                        border-top: 1px solid var(--border);
+                                        padding-top: 16px;
+                                    "
+                                ></p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== KONTAK ======================== -->
+        <section id="kontak" class="section-alt" style="padding: 96px 24px">
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div
+                    class="anim-fade"
+                    style="text-align: center; margin-bottom: 56px"
+                >
+                    <div
+                        class="section-label"
+                        style="margin-bottom: 10px"
+                        x-text="s.kontak?.sectionLabel || ''"
+                    ></div>
+                    <h2
+                        style="
+                            font-size: clamp(2.2rem, 4vw, 3rem);
+                            font-weight: 900;
+                            color: var(--text-primary);
+                        "
+                    >
+                        <span x-text="(s.kontak?.title || '') + ' '"></span
+                        ><span
+                            x-text="s.kontak?.titleHighlight || ''"
+                            style="color: var(--gold)"
+                        ></span>
+                    </h2>
+                    <div class="divider-gold" style="margin: 16px auto 0"></div>
+                </div>
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 40px;
+                    "
+                >
+                    <!-- Info Cards -->
+                    <div
+                        style="display: flex; flex-direction: column; gap: 14px"
+                        class="anim-left"
+                    >
+                        <template
+                            x-for="info in s.kontak?.info || []"
+                            :key="info.label"
+                        >
+                            <div
+                                class="data-card"
+                                style="
+                                    padding: 22px;
+                                    display: flex;
+                                    align-items: flex-start;
+                                    gap: 18px;
+                                "
+                            >
+                                <div class="icon-box" style="flex-shrink: 0">
+                                    <span
+                                        x-html="getIcon(info.icon)"
+                                        style="color: #000"
+                                    ></span>
+                                </div>
+                                <div>
+                                    <h4
+                                        x-text="info.label"
+                                        style="
+                                            font-weight: 700;
+                                            color: var(--text-primary);
+                                            margin-bottom: 6px;
+                                        "
+                                    ></h4>
+                                    <template
+                                        x-for="line in info.lines"
+                                        :key="line"
+                                    >
+                                        <p
+                                            x-text="line"
+                                            style="
+                                                color: var(--text-secondary);
+                                                font-size: 14px;
+                                                line-height: 1.6;
+                                            "
+                                        ></p>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <!-- Form -->
+                    <div class="anim-right">
+                        <div class="data-card" style="padding: 32px">
+                            <h3
+                                style="
+                                    font-size: 1.2rem;
+                                    font-weight: 700;
+                                    color: var(--text-primary);
+                                    margin-bottom: 24px;
+                                "
+                            >
+                                Kirim Pesan
+                            </h3>
+                            <form
+                                onsubmit="showToast(event)"
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 14px;
+                                "
+                            >
+                                <div
+                                    style="
+                                        display: grid;
+                                        grid-template-columns: 1fr 1fr;
+                                        gap: 12px;
+                                    "
+                                >
+                                    <div>
+                                        <label class="form-label"
+                                            >Nama Lengkap</label
+                                        >
+                                        <input
+                                            type="text"
+                                            placeholder="Nama Anda"
+                                            class="form-input"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label class="form-label"
+                                            >No. Telepon</label
+                                        >
+                                        <input
+                                            type="tel"
+                                            placeholder="08xx-xxxx-xxxx"
+                                            class="form-input"
+                                        />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="form-label">Email</label>
+                                    <input
+                                        type="email"
+                                        placeholder="email@example.com"
+                                        class="form-input"
+                                    />
+                                </div>
+                                <div>
+                                    <label class="form-label">Keperluan</label>
+                                    <select
+                                        class="form-input"
+                                        style="
+                                            appearance: none;
+                                            cursor: pointer;
+                                        "
+                                    >
+                                        <option value="">
+                                            Pilih keperluan
+                                        </option>
+                                        <option>Informasi Kunjungan</option>
+                                        <option>Pengajuan PB/CMB</option>
+                                        <option>Informasi WBP</option>
+                                        <option>Pengaduan</option>
+                                        <option>Lainnya</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="form-label">Pesan</label>
+                                    <textarea
+                                        rows="4"
+                                        placeholder="Tulis pesan Anda..."
+                                        class="form-input"
+                                        style="resize: none"
+                                    ></textarea>
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="btn-primary ripple-btn"
+                                    style="justify-content: center"
+                                    @click="ripple($event)"
+                                >
+                                    Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== FOOTER ======================== -->
+        <footer
+            style="
+                background: var(--bg-card);
+                border-top: 1px solid var(--border);
+                padding: 64px 24px 32px;
+            "
+        >
+            <div style="max-width: 1280px; margin: 0 auto">
+                <div
+                    style="
+                        display: grid;
+                        grid-template-columns: 2fr 1fr 1fr;
+                        gap: 48px;
+                        margin-bottom: 48px;
+                    "
+                    class="footer-grid"
+                >
+                    <div>
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                margin-bottom: 16px;
+                            "
+                        >
+                            <div
+                                style="
+                                    width: 42px;
+                                    height: 42px;
+                                    border-radius: 11px;
+                                    background: var(--gold);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-shrink: 0;
+                                "
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                >
+                                    <path
+                                        d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"
+                                        fill="#000"
+                                    />
+                                </svg>
+                            </div>
+                            <div>
+                                <div
+                                    x-text="s.site?.subtitle || ''"
+                                    style="
+                                        font-size: 10px;
+                                        font-weight: 700;
+                                        color: var(--gold);
+                                        letter-spacing: 0.13em;
+                                        text-transform: uppercase;
+                                    "
+                                ></div>
+                                <div
+                                    x-text="s.site?.title || ''"
+                                    style="
+                                        color: var(--text-primary);
+                                        font-weight: 800;
+                                        font-size: 15px;
+                                    "
+                                ></div>
+                            </div>
+                        </div>
+                        <p
+                            x-text="s.site?.footerDesc || ''"
+                            style="
+                                color: var(--text-secondary);
+                                font-size: 14px;
+                                line-height: 1.7;
+                                max-width: 300px;
+                            "
+                        ></p>
+                    </div>
+                    <div>
+                        <h4
+                            style="
+                                font-weight: 700;
+                                color: var(--text-primary);
+                                margin-bottom: 18px;
+                                font-size: 15px;
+                            "
+                        >
+                            Navigasi
+                        </h4>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                            "
+                        >
+                            <template
+                                x-for="link in s.footer?.navLinks || []"
+                                :key="link.label"
+                            >
+                                <a
+                                    :href="link.href"
+                                    x-text="link.label"
+                                    class="footer-link"
+                                ></a>
+                            </template>
+                        </div>
+                    </div>
+                    <div>
+                        <h4
+                            style="
+                                font-weight: 700;
+                                color: var(--text-primary);
+                                margin-bottom: 18px;
+                                font-size: 15px;
+                            "
+                        >
+                            Layanan
+                        </h4>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                            "
+                        >
+                            <template
+                                x-for="link in s.footer?.layananLinks || []"
+                                :key="link.label"
+                            >
+                                <a
+                                    :href="link.href"
+                                    x-text="link.label"
+                                    class="footer-link"
+                                ></a>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="
+                        border-top: 1px solid var(--border);
+                        padding-top: 24px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 12px;
+                    "
+                >
+                    <p
+                        x-text="s.site?.copyright || ''"
+                        style="color: var(--text-muted); font-size: 13px"
+                    ></p>
+                    <p
+                        x-text="s.site?.copyrightSub || ''"
+                        style="color: var(--text-muted); font-size: 13px"
+                    ></p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ======================== ALPINE APP ======================== -->
+        <script>
+            function App() {
+                return {
+                    s: {},
+                    isDark: true,
+                    mobileOpen: false,
+
+                    async init() {
+                        // Load settings.json
+                        try {
+                            const res = await fetch("./settings.json");
+                            this.s = await res.json();
+                        } catch (e) {
+                            console.warn(
+                                "settings.json not found, using empty data",
+                                e,
+                            );
+                            this.s = {};
+                        }
+
+                        // Theme from localStorage
+                        const saved =
+                            localStorage.getItem("lapas-theme") || "dark";
+                        this.isDark = saved === "dark";
+                        this.applyTheme();
+
+                        // After data loaded, trigger DOM setup
+                        this.$nextTick(() => {
+                            hideLoader();
+                            initScrollAnimations();
+                            initCounters();
+                            initParticles();
+                            initProgressBar();
+                            initBackTop();
+                            initNavScroll();
+                            initSmoothScroll();
+                        });
+                    },
+
+                    toggleTheme() {
+                        this.isDark = !this.isDark;
+                        this.applyTheme();
+                        localStorage.setItem(
+                            "lapas-theme",
+                            this.isDark ? "dark" : "light",
+                        );
+                    },
+
+                    applyTheme() {
+                        document.body.classList.toggle("dark", this.isDark);
+                        document.body.classList.toggle("light", !this.isDark);
+                    },
+
+                    ripple(e) {
+                        const btn = e.currentTarget;
+                        const r = document.createElement("span");
+                        const rect = btn.getBoundingClientRect();
+                        const size = Math.max(rect.width, rect.height);
+                        r.className = "ripple";
+                        r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px;`;
+                        btn.appendChild(r);
+                        setTimeout(() => r.remove(), 700);
+                    },
+
+                    getIcon(name) {
+                        const icons = {
+                            users: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
+                            book: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>`,
+                            alert: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+                            award: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+                            smile: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
+                            calendar: `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+                            file: `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>`,
+                            globe: `<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>`,
+                            home: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>`,
+                            heart: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>`,
+                            activity: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+                            graduation: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`,
+                            "user-plus": `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="23" y1="11" x2="17" y2="11"/><line x1="20" y1="8" x2="20" y2="14"/></svg>`,
+                            lock: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>`,
+                            refresh: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="23 4 23 8 19 8"/><polyline points="1 20 1 16 5 16"/><path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>`,
+                            "book-open": `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>`,
+                            search: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+                            shield: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+                            "check-square": `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>`,
+                            dollar: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>`,
+                            eye: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
+                            grid: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`,
+                            "map-pin": `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+                            phone: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>`,
+                            mail: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,
+                            clock: `<svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+                        };
+                        return (
+                            icons[name] ||
+                            `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>`
+                        );
+                    },
+                };
+            }
+
+            /* ===== Loader ===== */
+            function hideLoader() {
+                const loader = document.getElementById("loader");
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+                    setTimeout(() => (loader.style.display = "none"), 600);
+                }, 700);
+            }
+
+            /* ===== Scroll Animations ===== */
+            function initScrollAnimations() {
+                const targets = document.querySelectorAll(
+                    ".anim-fade, .anim-left, .anim-right, .anim-scale, .anim-flip",
+                );
+                const obs = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((e) => {
+                            if (e.isIntersecting) {
+                                e.target.classList.add("visible");
+                                obs.unobserve(e.target);
+                            }
+                        });
+                    },
+                    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+                );
+                targets.forEach((t) => obs.observe(t));
+            }
+
+            /* ===== Counter ===== */
+            function initCounters() {
+                const obs = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((e) => {
+                            if (e.isIntersecting && !e.target.dataset.done) {
+                                e.target.dataset.done = "1";
+                                const target = parseInt(
+                                    e.target.dataset.target,
+                                );
+                                const dur = 2000;
+                                const start = performance.now();
+                                const tick = (now) => {
+                                    const p = Math.min((now - start) / dur, 1);
+                                    const ease = 1 - Math.pow(1 - p, 3);
+                                    e.target.textContent = Math.floor(
+                                        ease * target,
+                                    );
+                                    if (p < 1) requestAnimationFrame(tick);
+                                    else e.target.textContent = target;
+                                };
+                                requestAnimationFrame(tick);
+                            }
+                        });
+                    },
+                    { threshold: 0.5 },
+                );
+                document
+                    .querySelectorAll(".counter")
+                    .forEach((el) => obs.observe(el));
+            }
+
+            /* ===== Particles ===== */
+            function initParticles() {
+                const canvas = document.getElementById("particles");
+                const ctx = canvas.getContext("2d");
+                let W = (canvas.width = window.innerWidth);
+                let H = (canvas.height = window.innerHeight);
+                window.addEventListener("resize", () => {
+                    W = canvas.width = window.innerWidth;
+                    H = canvas.height = window.innerHeight;
+                });
+
+                const particles = Array.from({ length: 55 }, () => ({
+                    x: Math.random() * W,
+                    y: Math.random() * H,
+                    r: Math.random() * 1.8 + 0.4,
+                    dx: (Math.random() - 0.5) * 0.35,
+                    dy: (Math.random() - 0.5) * 0.35,
+                    o: Math.random() * 0.5 + 0.1,
+                }));
+
+                function draw() {
+                    ctx.clearRect(0, 0, W, H);
+                    const isDarkMode = document.body.classList.contains("dark");
+                    particles.forEach((p) => {
+                        p.x += p.dx;
+                        p.y += p.dy;
+                        if (p.x < 0 || p.x > W) p.dx *= -1;
+                        if (p.y < 0 || p.y > H) p.dy *= -1;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                        ctx.fillStyle = isDarkMode
+                            ? `rgba(245,158,11,${p.o})`
+                            : `rgba(245,158,11,${p.o * 0.5})`;
+                        ctx.fill();
+                    });
+                    // Draw connecting lines
+                    particles.forEach((a, i) => {
+                        particles.slice(i + 1).forEach((b) => {
+                            const dist = Math.hypot(a.x - b.x, a.y - b.y);
+                            if (dist < 120) {
+                                ctx.beginPath();
+                                ctx.moveTo(a.x, a.y);
+                                ctx.lineTo(b.x, b.y);
+                                const alpha =
+                                    (1 - dist / 120) *
+                                    (isDarkMode ? 0.12 : 0.06);
+                                ctx.strokeStyle = `rgba(245,158,11,${alpha})`;
+                                ctx.lineWidth = 0.8;
+                                ctx.stroke();
+                            }
+                        });
+                    });
+                    requestAnimationFrame(draw);
+                }
+                draw();
+            }
+
+            /* ===== Progress Bar ===== */
+            function initProgressBar() {
+                const bar = document.getElementById("progress-bar");
+                window.addEventListener("scroll", () => {
+                    const pct =
+                        (window.scrollY /
+                            (document.body.scrollHeight - window.innerHeight)) *
+                        100;
+                    bar.style.width = pct + "%";
+                });
+            }
+
+            /* ===== Back To Top ===== */
+            function initBackTop() {
+                const btn = document.getElementById("back-top");
+                window.addEventListener("scroll", () => {
+                    btn.classList.toggle("show", window.scrollY > 400);
+                });
+            }
+
+            /* ===== Nav Scroll ===== */
+            function initNavScroll() {
+                const nav = document.getElementById("navbar");
+                window.addEventListener("scroll", () => {
+                    nav.classList.toggle("nav-scrolled", window.scrollY > 50);
+                });
+            }
+
+            /* ===== Smooth Scroll ===== */
+            function initSmoothScroll() {
+                document.querySelectorAll('a[href^="#"]').forEach((a) => {
+                    a.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        const t = document.querySelector(
+                            a.getAttribute("href"),
+                        );
+                        if (t)
+                            window.scrollTo({
+                                top:
+                                    t.getBoundingClientRect().top +
+                                    window.scrollY -
+                                    80,
+                                behavior: "smooth",
+                            });
+                    });
+                });
+            }
+
+            /* ===== Toast ===== */
+            function showToast(e) {
+                e.preventDefault();
+                const t = document.getElementById("toast");
+                t.classList.add("show");
+                setTimeout(() => t.classList.remove("show"), 3500);
+            }
+        </script>
+
+        <!-- Responsive grid overrides -->
+        <style>
+            @media (max-width: 1100px) {
+                .zona-grid {
+                    grid-template-columns: repeat(3, 1fr) !important;
+                }
+            }
+            @media (max-width: 900px) {
+                .desktop-nav {
+                    display: none !important;
+                }
+                .mobile-controls {
+                    display: flex !important;
+                }
+                .stats-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .misi-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .tugas-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .zona-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .struktural-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+                .footer-grid {
+                    grid-template-columns: 1fr 1fr !important;
+                }
+                .gallery-grid {
+                    grid-template-columns: repeat(2, 1fr) !important;
+                }
+            }
+            @media (max-width: 640px) {
+                body > section > div[style*="grid-template-columns:1fr 1fr"],
+                body
+                    > section
+                    > div
+                    > div[style*="grid-template-columns:1fr 1fr"] {
+                    grid-template-columns: 1fr !important;
+                }
+                .stats-grid {
+                    grid-template-columns: 1fr 1fr !important;
+                }
+                .misi-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .tugas-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .zona-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .struktural-grid {
+                    grid-template-columns: 1fr 1fr !important;
+                }
+                .gallery-grid {
+                    grid-template-columns: 1fr !important;
+                }
+                .footer-grid {
+                    grid-template-columns: 1fr !important;
+                }
+            }
+            @media (min-width: 901px) {
+                .mobile-controls {
+                    display: none !important;
+                }
+            }
+        </style>
+    </body>
+</html>
