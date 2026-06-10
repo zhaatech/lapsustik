@@ -34,13 +34,6 @@
   },
   "stats": [
     {
-      "icon": "users",
-      "value": 631,
-      "suffix": "+",
-      "label": "Warga Binaan",
-      "active": false
-    },
-    {
       "icon": "book",
       "value": 24,
       "suffix": "",
@@ -357,7 +350,10 @@
       {
         "icon": "mail",
         "label": "Email",
-        "lines": ["kanwilpapua@kemenkum.go.id", "lapasnarkotikajayapura@kemenkumham.go.id"]
+        "lines": [
+          "kanwilpapua@kemenkum.go.id",
+          "lapasnarkotikajayapura@kemenkumham.go.id"
+        ]
       },
       {
         "icon": "clock",
