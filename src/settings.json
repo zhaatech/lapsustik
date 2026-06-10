@@ -3,7 +3,7 @@
     "title": "Lapas Narkotika Jayapura",
     "subtitle": "KEMENKUMHAM RI",
     "tagline": "Mewujudkan Pemasyarakatan yang PASTI dan Berintegritas",
-    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2007, Lapas ini memiliki kapasitas 308 orang namun saat ini menampung lebih dari 600 warga binaan, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
+    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2007, Lapas ini memiliki kapasitas 308 orang, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
     "footerDesc": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura — Mewujudkan pemasyarakatan yang PASTI dan berintegritas.",
     "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil Kemenkumham Papua. All rights reserved.",
     "copyrightSub": "Direktorat Jenderal Pemasyarakatan — Kementerian Hukum dan HAM RI"
@@ -68,7 +68,7 @@
     "titleHighlight": "Kelas IIA Jayapura",
     "paragraphs": [
       "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura merupakan unit pelaksana teknis di bawah Kementerian Hukum dan HAM Republik Indonesia. Berdiri sejak tahun 2007, kami berperan strategis dalam pembinaan, rehabilitasi, dan reintegrasi sosial bagi warga binaan pemasyarakatan tindak pidana narkotika di wilayah Papua.",
-      "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, dengan kapasitas tampung 308 orang namun saat ini melayani lebih dari 630 warga binaan, mayoritas kasus narkotika jenis ganja. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
+      "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, dengan kapasitas tampung 308 orang, mayoritas kasus narkotika jenis ganja. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
     ],
     "images": [
       "https://images.pexels.com/photos/4328661/pexels-photo-4328661.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=700",
@@ -351,10 +351,7 @@
       {
         "icon": "mail",
         "label": "Email",
-        "lines": [
-          "kanwilpapua@kemenkum.go.id",
-          "lapasnarkotikajayapura@kemenkumham.go.id"
-        ]
+        "lines": ["kanwilpapua@kemenkum.go.id"]
       },
       {
         "icon": "clock",
@@ -373,7 +370,6 @@
       { "label": "FAQ", "href": "#faq" }
     ],
     "layananLinks": [
-      { "label": "Informasi WBP", "href": "#" },
       { "label": "Pengajuan PB", "href": "#" },
       { "label": "Jadwal Kunjungan", "href": "#" },
       { "label": "Pengaduan", "href": "#" },

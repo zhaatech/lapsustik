@@ -1,12 +1,21 @@
 function App() {
   return {
     s: {},
-    isDark: !0,
-    mobileOpen: !1,
-    formData: { name: "", phone: "", email: "", purpose: "", message: "" },
+    isDark: true,
+    mobileOpen: false,
+    formData: {
+      name: "",
+      phone: "",
+      email: "",
+      purpose: "",
+      message: "",
+    },
+
     sendToWhatsApp() {
       const waNumber = this.s.kontak?.whatsappNumber;
       const cleanNumber = waNumber.replace(/\D/g, "");
+
+      // Validasi field wajib
       if (
         !this.formData.name ||
         !this.formData.phone ||
@@ -19,6 +28,8 @@ function App() {
         );
         return;
       }
+
+      // Format pesan WhatsApp
       let text = `*FORM KONTAK LAPAS NARKOTIKA JAYAPURA*%0A%0A`;
       text += `*Nama:* ${this.formData.name}%0A`;
       text += `*No. Telepon:* ${this.formData.phone}%0A`;
@@ -26,7 +37,9 @@ function App() {
       text += `*Keperluan:* ${this.formData.purpose}%0A`;
       text += `*Pesan:*%0A${this.formData.message}%0A%0A`;
       text += `_Dikirim dari website resmi Lapas Narkotika Jayapura_`;
+
       this.showToastMessage("✓ Mengalihkan ke WhatsApp...", "success");
+
       setTimeout(() => {
         window.open(`https://wa.me/${cleanNumber}?text=${text}`, "_blank");
         this.formData = {
@@ -38,15 +51,16 @@ function App() {
         };
       }, 800);
     },
+
     showToastMessage(message, type = "success") {
       const toast = document.getElementById("toast");
       if (toast) {
         toast.textContent = message;
         if (type === "warning") {
-          toast.style.background = "#dc2626";
+          toast.style.background = "#dc2626"; // merah untuk warning
           toast.style.color = "#fff";
         } else {
-          toast.style.background = "var(--gold)";
+          toast.style.background = "var(--gold)"; // warna default
           toast.style.color = "#000";
         }
         toast.classList.add("show");
@@ -61,17 +75,23 @@ function App() {
         }, 3500);
       }
     },
+
     async init() {
+      // Load settings.json
       try {
-        const res = await fetch("./settings.json");
+        const res = await fetch("./src/settings.json");
         this.s = await res.json();
       } catch (e) {
         console.warn("settings.json not found, using empty data", e);
         this.s = {};
       }
+
+      // Theme from localStorage
       const saved = localStorage.getItem("lapas-theme") || "dark";
       this.isDark = saved === "dark";
       this.applyTheme();
+
+      // After data loaded, trigger DOM setup
       this.$nextTick(() => {
         hideLoader();
         initScrollAnimations();
@@ -83,15 +103,18 @@ function App() {
         initSmoothScroll();
       });
     },
+
     toggleTheme() {
       this.isDark = !this.isDark;
       this.applyTheme();
       localStorage.setItem("lapas-theme", this.isDark ? "dark" : "light");
     },
+
     applyTheme() {
       document.body.classList.toggle("dark", this.isDark);
       document.body.classList.toggle("light", !this.isDark);
     },
+
     ripple(e) {
       const btn = e.currentTarget;
       const r = document.createElement("span");
@@ -102,6 +125,7 @@ function App() {
       btn.appendChild(r);
       setTimeout(() => r.remove(), 700);
     },
+
     getIcon(name) {
       const icons = {
         users: `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>`,
@@ -138,6 +162,8 @@ function App() {
     },
   };
 }
+
+/* ===== Loader ===== */
 function hideLoader() {
   const loader = document.getElementById("loader");
   setTimeout(() => {
@@ -145,6 +171,8 @@ function hideLoader() {
     setTimeout(() => (loader.style.display = "none"), 600);
   }, 700);
 }
+
+/* ===== Scroll Animations ===== */
 function initScrollAnimations() {
   const targets = document.querySelectorAll(
     ".anim-fade, .anim-left, .anim-right, .anim-scale, .anim-flip",
@@ -162,6 +190,8 @@ function initScrollAnimations() {
   );
   targets.forEach((t) => obs.observe(t));
 }
+
+/* ===== Counter ===== */
 function initCounters() {
   const obs = new IntersectionObserver(
     (entries) => {
@@ -186,6 +216,8 @@ function initCounters() {
   );
   document.querySelectorAll(".counter").forEach((el) => obs.observe(el));
 }
+
+/* ===== Particles ===== */
 function initParticles() {
   const canvas = document.getElementById("particles");
   const ctx = canvas.getContext("2d");
@@ -195,6 +227,7 @@ function initParticles() {
     W = canvas.width = window.innerWidth;
     H = canvas.height = window.innerHeight;
   });
+
   const particles = Array.from({ length: 55 }, () => ({
     x: Math.random() * W,
     y: Math.random() * H,
@@ -203,6 +236,7 @@ function initParticles() {
     dy: (Math.random() - 0.5) * 0.35,
     o: Math.random() * 0.5 + 0.1,
   }));
+
   function draw() {
     ctx.clearRect(0, 0, W, H);
     const isDarkMode = document.body.classList.contains("dark");
@@ -218,6 +252,7 @@ function initParticles() {
         : `rgba(245,158,11,${p.o * 0.5})`;
       ctx.fill();
     });
+    // Draw connecting lines
     particles.forEach((a, i) => {
       particles.slice(i + 1).forEach((b) => {
         const dist = Math.hypot(a.x - b.x, a.y - b.y);
@@ -236,6 +271,8 @@ function initParticles() {
   }
   draw();
 }
+
+/* ===== Progress Bar ===== */
 function initProgressBar() {
   const bar = document.getElementById("progress-bar");
   window.addEventListener("scroll", () => {
@@ -245,18 +282,24 @@ function initProgressBar() {
     bar.style.width = pct + "%";
   });
 }
+
+/* ===== Back To Top ===== */
 function initBackTop() {
   const btn = document.getElementById("back-top");
   window.addEventListener("scroll", () => {
     btn.classList.toggle("show", window.scrollY > 400);
   });
 }
+
+/* ===== Nav Scroll ===== */
 function initNavScroll() {
   const nav = document.getElementById("navbar");
   window.addEventListener("scroll", () => {
     nav.classList.toggle("nav-scrolled", window.scrollY > 50);
   });
 }
+
+/* ===== Smooth Scroll ===== */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
@@ -270,6 +313,8 @@ function initSmoothScroll() {
     });
   });
 }
+
+/* ===== Toast ===== */
 function showToast(e) {
   e.preventDefault();
   const t = document.getElementById("toast");

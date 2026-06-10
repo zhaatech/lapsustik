@@ -5,6 +5,7 @@
 }
 * {
     font-family: "Inter", sans-serif;
+    max-width: 100%;
 }
 html {
     scroll-behavior: smooth;
@@ -28,11 +29,15 @@ body {
 [x-cloak] {
     display: none !important;
 }
+
+/* ===== THEME VARIABLES ===== */
 :root {
     --gold: #f59e0b;
     --gold-dark: #d97706;
     --gold-light: #fbbf24;
 }
+
+/* DARK MODE (default) */
 body.dark {
     --bg-primary: #0a0f1e;
     --bg-secondary: #0d1323;
@@ -58,6 +63,8 @@ body.dark {
     --btn-secondary-color: #ffffff;
     --particle-color: rgba(245, 158, 11, 0.5);
 }
+
+/* LIGHT MODE */
 body.light {
     --bg-primary: #f8f9fc;
     --bg-secondary: #eef0f7;
@@ -83,10 +90,13 @@ body.light {
     --btn-secondary-color: #0f172a;
     --particle-color: rgba(245, 158, 11, 0.3);
 }
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
 }
+
+/* ===== NAV ===== */
 .nav-fixed {
     position: fixed;
     top: 0;
@@ -102,7 +112,7 @@ body {
         box-shadow 0.4s;
 }
 .nav-scrolled {
-    box-shadow: 0 4px 30px rgb(0 0 0 / 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 .nav-link {
     color: var(--text-primary);
@@ -114,6 +124,8 @@ body {
 .nav-link:hover {
     color: var(--gold);
 }
+
+/* ===== BUTTONS ===== */
 .btn-primary {
     background-color: var(--gold);
     color: #000;
@@ -135,10 +147,10 @@ body {
 .btn-primary:hover {
     background-color: var(--gold-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgb(245 158 11 / 0.35);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
 }
 .btn-secondary {
-    background-color: #fff0;
+    background-color: transparent;
     border: 1.5px solid var(--btn-secondary-border);
     color: var(--btn-secondary-color);
     font-weight: 600;
@@ -161,6 +173,8 @@ body {
     color: var(--gold);
     transform: translateY(-2px);
 }
+
+/* ===== ICONS & CARDS ===== */
 .icon-box {
     background-color: var(--gold);
     border-radius: 12px;
@@ -172,8 +186,8 @@ body {
     flex-shrink: 0;
 }
 .icon-box-sm {
-    background-color: rgb(245 158 11 / 0.12);
-    border: 1px solid rgb(245 158 11 / 0.28);
+    background-color: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.28);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -195,6 +209,7 @@ body {
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
+
 .data-card {
     background: var(--bg-card);
     border: 1px solid var(--border-card);
@@ -212,6 +227,7 @@ body {
 .data-card.active {
     border-color: var(--gold);
 }
+
 .zone-card {
     background: var(--card-gradient);
     border: 1px solid var(--border-card);
@@ -227,6 +243,8 @@ body {
     transform: translateY(-6px);
     box-shadow: 0 12px 40px var(--shadow-gold);
 }
+
+/* ===== GALLERY ===== */
 .gallery-filter-btn {
     border: 1.5px solid var(--border-card);
     border-radius: 999px;
@@ -236,7 +254,7 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     color: var(--text-primary);
-    background: #fff0;
+    background: transparent;
 }
 .gallery-filter-btn.active {
     background-color: var(--gold);
@@ -264,6 +282,8 @@ body {
     transform: scale(1.08);
     filter: brightness(1.05);
 }
+
+/* ===== FAQ ===== */
 .faq-item {
     border: 1px solid var(--faq-border);
     border-radius: 14px;
@@ -274,9 +294,11 @@ body {
     background: var(--bg-card);
 }
 .faq-item:hover {
-    border-color: rgb(245 158 11 / 0.4);
+    border-color: rgba(245, 158, 11, 0.4);
     box-shadow: 0 4px 20px var(--shadow-gold);
 }
+
+/* ===== ORG ===== */
 .org-avatar {
     width: 80px;
     height: 80px;
@@ -288,7 +310,7 @@ body {
     font-size: 22px;
     font-weight: 800;
     color: var(--gold);
-    border: 2px solid rgb(245 158 11 / 0.35);
+    border: 2px solid rgba(245, 158, 11, 0.35);
 }
 .org-avatar-sm {
     width: 60px;
@@ -301,14 +323,16 @@ body {
     font-size: 16px;
     font-weight: 800;
     color: var(--gold);
-    border: 2px solid rgb(245 158 11 / 0.3);
+    border: 2px solid rgba(245, 158, 11, 0.3);
 }
+
+/* ===== THEME TOGGLE ===== */
 .theme-toggle {
     width: 52px;
     height: 28px;
     border-radius: 999px;
     border: 2px solid var(--gold);
-    background: #fff0;
+    background: transparent;
     position: relative;
     cursor: pointer;
     transition: background 0.4s;
@@ -331,6 +355,8 @@ body {
 body.light .theme-toggle-thumb {
     transform: translateX(24px);
 }
+
+/* ===== FOOTER ===== */
 .footer-link {
     color: var(--text-secondary);
     transition: color 0.3s;
@@ -341,6 +367,8 @@ body.light .theme-toggle-thumb {
 .footer-link:hover {
     color: var(--gold);
 }
+
+/* ===== INPUT ===== */
 .form-input {
     width: 100%;
     background: var(--input-bg);
@@ -356,7 +384,7 @@ body.light .theme-toggle-thumb {
 }
 .form-input:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgb(245 158 11 / 0.15);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
 }
 .form-input::placeholder {
     color: var(--text-muted);
@@ -368,6 +396,9 @@ body.light .theme-toggle-thumb {
     display: block;
     font-weight: 500;
 }
+
+/* ===== ANIMATIONS ===== */
+/* Scroll-triggered */
 .anim-fade {
     opacity: 0;
     transform: translateY(36px);
@@ -407,6 +438,7 @@ body.light .theme-toggle-thumb {
     opacity: 1 !important;
     transform: none !important;
 }
+
 .d1 {
     transition-delay: 0.05s;
 }
@@ -431,22 +463,26 @@ body.light .theme-toggle-thumb {
 .d8 {
     transition-delay: 0.75s;
 }
+
+/* Pulse glow on gold badge */
 @keyframes pulse-gold {
     0%,
     100% {
-        box-shadow: 0 0 0 0 rgb(245 158 11 / 0.5);
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5);
     }
     50% {
-        box-shadow: 0 0 0 10px #fff0;
+        box-shadow: 0 0 0 10px rgba(245, 158, 11, 0);
     }
 }
 .pulse-badge {
     animation: pulse-gold 2.5s infinite;
 }
+
+/* Floating hero image */
 @keyframes float {
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0px);
     }
     50% {
         transform: translateY(-10px);
@@ -455,6 +491,8 @@ body.light .theme-toggle-thumb {
 .hero-float {
     animation: float 5s ease-in-out infinite;
 }
+
+/* Rotating glow ring */
 @keyframes spin-slow {
     0% {
         transform: rotate(0deg);
@@ -466,6 +504,8 @@ body.light .theme-toggle-thumb {
 .spin-slow {
     animation: spin-slow 14s linear infinite;
 }
+
+/* Stat number shimmer */
 @keyframes shimmer {
     0% {
         background-position: -200% center;
@@ -481,15 +521,19 @@ body.light .theme-toggle-thumb {
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: #fff0;
+    -webkit-text-fill-color: transparent;
     animation: shimmer 3s linear infinite;
 }
+
+/* Particle canvas */
 #particles {
     position: absolute;
     inset: 0;
     pointer-events: none;
     z-index: 0;
 }
+
+/* Typing cursor */
 @keyframes blink {
     0%,
     100% {
@@ -509,6 +553,8 @@ body.light .theme-toggle-thumb {
     vertical-align: middle;
     border-radius: 2px;
 }
+
+/* Page-load hero entrance */
 @keyframes heroIn {
     from {
         opacity: 0;
@@ -537,6 +583,8 @@ body.light .theme-toggle-thumb {
 .hero-enter-5 {
     animation: heroIn 0.9s 0.7s ease both;
 }
+
+/* Loading overlay */
 #loader {
     position: fixed;
     inset: 0;
@@ -559,17 +607,23 @@ body.light .theme-toggle-thumb {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    border: 4px solid rgb(245 158 11 / 0.15);
+    border: 4px solid rgba(245, 158, 11, 0.15);
     border-top-color: var(--gold);
     animation: loaderSpin 0.9s linear infinite;
 }
+
+/* Wave divider */
 .wave-divider svg {
     display: block;
 }
+
+/* Mobile menu */
 .mobile-menu {
     background: var(--bg-card);
     border-top: 1px solid var(--border);
 }
+
+/* Ripple on buttons */
 .ripple-btn {
     position: relative;
     overflow: hidden;
@@ -577,7 +631,7 @@ body.light .theme-toggle-thumb {
 .ripple-btn .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgb(255 255 255 / 0.3);
+    background: rgba(255, 255, 255, 0.3);
     transform: scale(0);
     animation: ripple-anim 0.6s linear;
     pointer-events: none;
@@ -588,6 +642,8 @@ body.light .theme-toggle-thumb {
         opacity: 0;
     }
 }
+
+/* Glowing border on hero image */
 .hero-img-wrap {
     position: relative;
 }
@@ -603,12 +659,16 @@ body.light .theme-toggle-thumb {
     position: relative;
     z-index: 1;
 }
+
+/* Section backgrounds */
 .section-dark {
     background-color: var(--bg-primary);
 }
 .section-alt {
     background-color: var(--bg-secondary);
 }
+
+/* Progress bar top */
 #progress-bar {
     position: fixed;
     top: 0;
@@ -619,6 +679,8 @@ body.light .theme-toggle-thumb {
     transition: width 0.1s;
     width: 0%;
 }
+
+/* Back to top */
 #back-top {
     position: fixed;
     bottom: 28px;
@@ -639,7 +701,7 @@ body.light .theme-toggle-thumb {
         opacity 0.4s,
         transform 0.4s,
         box-shadow 0.3s;
-    box-shadow: 0 4px 16px rgb(245 158 11 / 0.4);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);
     border: none;
 }
 #back-top.show {
@@ -647,9 +709,11 @@ body.light .theme-toggle-thumb {
     transform: translateY(0);
 }
 #back-top:hover {
-    box-shadow: 0 8px 24px rgb(245 158 11 / 0.6);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.6);
     transform: translateY(-3px);
 }
+
+/* Toast */
 #toast {
     position: fixed;
     bottom: 24px;
@@ -660,7 +724,7 @@ body.light .theme-toggle-thumb {
     font-weight: 700;
     padding: 14px 28px;
     border-radius: 14px;
-    box-shadow: 0 8px 30px rgb(245 158 11 / 0.4);
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.4);
     z-index: 9998;
     transition:
         transform 0.5s cubic-bezier(0.22, 0.68, 0, 1.2),
@@ -672,6 +736,9 @@ body.light .theme-toggle-thumb {
     transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
+
+/*Reponsive design*/
+
 @media (max-width: 1100px) {
     .zona-grid {
         grid-template-columns: repeat(3, 1fr) !important;
