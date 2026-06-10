@@ -38,10 +38,7 @@ function App() {
       text += `*Pesan:*%0A${this.formData.message}%0A%0A`;
       text += `_Dikirim dari website resmi Lapas Narkotika Jayapura_`;
 
-      this.showToastMessage(
-        "✓ Pesan berhasil disiapkan! Mengalihkan ke WhatsApp...",
-        "success",
-      );
+      this.showToastMessage("✓ Mengalihkan ke WhatsApp...", "success");
 
       setTimeout(() => {
         window.open(`https://wa.me/${cleanNumber}?text=${text}`, "_blank");
