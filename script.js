@@ -12,7 +12,7 @@ function App() {
     },
 
     sendToWhatsApp() {
-      const waNumber = this.s.kontak?.whatsappNumber || "6281234567890"; // Ganti dengan nomor resmi
+      const waNumber = this.s.kontak?.whatsappNumber;
       const cleanNumber = waNumber.replace(/\D/g, "");
 
       // Validasi field wajib
