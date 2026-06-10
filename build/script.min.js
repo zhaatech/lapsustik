@@ -63,7 +63,7 @@ function App() {
     },
     async init() {
       try {
-        const res = await fetch("./build/settings.json");
+        const res = await fetch("./settings.json");
         this.s = await res.json();
       } catch (e) {
         console.warn("settings.json not found, using empty data", e);
