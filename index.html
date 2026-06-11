@@ -860,7 +860,7 @@
                             flex-wrap: wrap;
                         "
                     >
-                        <!-- Avatar Pimpinan dengan Gambar -->
+                        <!-- Avatar Pimpinan: tampilkan foto jika ada, jika tidak tampilkan inisial -->
                         <div
                             class="org-avatar"
                             style="
@@ -869,9 +869,11 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+                                position: relative;
                             "
                         >
                             <img
+                                x-show="s.organisasi?.pimpinan?.photo"
                                 :src="s.organisasi?.pimpinan?.photo"
                                 :alt="s.organisasi?.pimpinan?.nama"
                                 style="
@@ -880,6 +882,15 @@
                                     object-fit: cover;
                                 "
                             />
+                            <span
+                                x-show="!s.organisasi?.pimpinan?.photo"
+                                x-text="s.organisasi?.pimpinan?.inisial || ''"
+                                style="
+                                    font-size: 22px;
+                                    font-weight: 800;
+                                    color: var(--gold);
+                                "
+                            ></span>
                         </div>
                         <div style="flex: 1; min-width: 200px">
                             <div
@@ -979,7 +990,7 @@
                 <div
                     style="
                         display: grid;
-                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-columns: repeat(4, 1fr);
                         gap: 14px;
                     "
                     class="struktural-grid"
@@ -993,7 +1004,6 @@
                             :class="'d'+(i%4+1)"
                             style="padding: 20px; text-align: center"
                         >
-                            <!-- Avatar dengan Gambar, bukan inisial -->
                             <div
                                 class="org-avatar-sm"
                                 style="
@@ -1005,6 +1015,7 @@
                                 "
                             >
                                 <img
+                                    x-show="pj.photo"
                                     :src="pj.photo"
                                     :alt="pj.nama"
                                     style="
@@ -1013,6 +1024,15 @@
                                         object-fit: cover;
                                     "
                                 />
+                                <span
+                                    x-show="!pj.photo"
+                                    x-text="pj.inisial || ''"
+                                    style="
+                                        font-size: 16px;
+                                        font-weight: 800;
+                                        color: var(--gold);
+                                    "
+                                ></span>
                             </div>
                             <h4
                                 x-text="pj.nama"

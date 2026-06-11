@@ -1,11 +1,11 @@
 {
   "site": {
     "title": "Lapas Narkotika Jayapura",
-    "subtitle": "IMIPAS RI",
+    "subtitle": "KEMENIPAS RI",
     "tagline": "Mewujudkan Pemasyarakatan yang PASTI dan Berintegritas",
     "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2008, Lapas ini memiliki kapasitas 308 orang, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
     "footerDesc": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura — Mewujudkan pemasyarakatan yang PASTI dan berintegritas.",
-    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil Kemenipas Papua. All rights reserved.",
+    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil KEMENIPAS Papua. All rights reserved.",
     "copyrightSub": "Direktorat Jenderal Pemasyarakatan — Kemenipas RI"
   },
   "nav": [
@@ -19,18 +19,18 @@
     { "label": "Kontak", "href": "#kontak" }
   ],
   "hero": {
-    "badge": "IMIPAS RI",
+    "badge": "Kementrian Imigrasi dan Pemasyarakatan Republik Indonesia",
     "title": "Lapas Narkotika",
     "titleHighlight": "Jayapura",
     "tagline": "Mewujudkan Pemasyarakatan yang",
     "taglineHighlight": "PASTI",
     "taglineSuffix": "dan Berintegritas",
-    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial bagi warga binaan pemasyarakatan kasus narkotika dengan menjunjung tinggi nilai integritas, transparansi, dan pelayanan publik yang prima.",
+    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berkomitmen menjalankan tugas pembinaan dan rehabilitasi bagi warga binaan pemasyarakatan kasus narkotika dengan menjunjung tinggi nilai integritas, transparansi, dan pelayanan publik yang prima.",
     "ctaPrimary": { "label": "Lihat Profil", "href": "#profil" },
     "ctaSecondary": { "label": "Hubungi Kami", "href": "#kontak" },
     "heroBadgeLabel": "KOMITMEN KAMI",
     "heroBadgeText": "Pemasyarakatan PASTI",
-    "heroImage": "src/img/hero.jpeg"
+    "heroImage": "src/img/hero.webp"
   },
   "stats": [
     {
@@ -71,9 +71,9 @@
       "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
     ],
     "images": [
-      "src/img/profile/01.jpeg",
-      "src/img/profile/02.jpeg",
-      "src/img/profile/03.jpeg"
+      "src/img/profile/01.webp",
+      "src/img/profile/02.webp",
+      "src/img/profile/03.webp"
     ],
     "infoCards": [
       { "icon": "calendar", "label": "DISAHKAN", "value": "Sejak 2008" },
@@ -175,8 +175,8 @@
       {
         "icon": "dollar",
         "tag": "ANTI HALINAR",
-        "title": "Komitmen Anti Korupsi",
-        "desc": "Pakta integritas dan zero tolerance terhadap praktik korupsi, kolusi, dan nepotisme."
+        "title": "Deklarasi Anti Halinar",
+        "desc": "pernyataan komitmen bersama  untuk mencegah dan memberantas peredaran Handphone ilegal, praktik Pungutan Liar (Pungli)."
       },
       {
         "icon": "eye",
@@ -196,7 +196,7 @@
     "title": "Struktur",
     "titleHighlight": "Organisasi",
     "pimpinan": {
-      "nama": "Jimreves Engel Stender Muloke",
+      "nama": "Jimreves Engel Stender Muloke, S.H.",
       "jabatan": "Kepala Lapas Narkotika Kelas IIA Jayapura",
       "photo": "src/img/cards/kalapas.webp",
       "deskripsi": "Memimpin Lapas Narkotika Jayapura dengan komitmen pada pelayanan publik prima, integritas, dan reformasi birokrasi berkelanjutan. Berdasarkan berita online, nama ini tercantum sebagai Kepala Lapas Narkotika Jayapura pada tahun 2025."
@@ -241,6 +241,31 @@
         "nama": "Beby Diana Sapulette, S.Sos.",
         "jabatan": "Kepala Urusan Umum",
         "photo": "src/img/cards/beby.webp"
+      },
+      {
+        "inisial": "IA",
+        "nama": "Ilham Abdullah, S.H.",
+        "jabatan": "Kepala Seksi Bimbingan Napi / Anak Didik"
+      },
+      {
+        "inisial": "MS",
+        "nama": "Muhammad Subchan, S.H.",
+        "jabatan": "Kepala Subsi Registrasi"
+      },
+      {
+        "inisial": "AI",
+        "nama": "Andri Irianto, S.H.",
+        "jabatan": "Kepala Subsi BIM Kerja dan Pengolahan Hasil Kerja"
+      },
+      {
+        "inisial": "OT",
+        "nama": "Oktovina Tapatkeding, A.Md.Kom.",
+        "jabatan": "Kepala Urusan Kepegawaian dan Keuangan"
+      },
+      {
+        "inisial": "FK",
+        "nama": "Fitriah Kadir, S.H.",
+        "jabatan": "Kepala Subsi Sarana Kerja"
       }
     ]
   },
@@ -259,82 +284,82 @@
     ],
     "items": [
       {
-        "src": "src/img/galery/pembinaan/01.jpeg",
+        "src": "src/img/galery/pembinaan/01.webp",
         "alt": "Kegiatan Pembinaan",
         "category": "Kegiatan Pembinaan"
       },
       {
-        "src": "src/img/galery/pembinaan/02.jpeg",
+        "src": "src/img/galery/pembinaan/02.webp",
         "alt": "Kegiatan Pembinaan",
         "category": "Kegiatan Pembinaan"
       },
       {
-        "src": "src/img/galery/pembinaan/03.jpeg",
+        "src": "src/img/galery/pembinaan/03.webp",
         "alt": "Kegiatan Pembinaan",
         "category": "Kegiatan Pembinaan"
       },
       {
-        "src": "src/img/galery/pegawai/01.jpeg",
+        "src": "src/img/galery/pegawai/01.webp",
         "alt": "Petugas Lapas",
         "category": "Kegiatan Pegawai"
       },
       {
-        "src": "src/img/galery/pegawai/02.jpeg",
+        "src": "src/img/galery/pegawai/02.webp",
         "alt": "Petugas Lapas",
         "category": "Kegiatan Pegawai"
       },
       {
-        "src": "src/img/galery/pegawai/03.jpeg",
+        "src": "src/img/galery/pegawai/03.webp",
         "alt": "Petugas Lapas",
         "category": "Kegiatan Pegawai"
       },
       {
-        "src": "src/img/galery/pegawai/04.jpeg",
+        "src": "src/img/galery/pegawai/04.webp",
         "alt": "Petugas Lapas",
         "category": "Kegiatan Pegawai"
       },
       {
-        "src": "src/img/galery/dinas/01.jpeg",
+        "src": "src/img/galery/dinas/01.webp",
         "alt": "Kunjungan Dinas",
         "category": "Kunjungan Dinas"
       },
       {
-        "src": "src/img/galery/dinas/02.jpeg",
+        "src": "src/img/galery/dinas/02.webp",
         "alt": "Kunjungan Dinas",
         "category": "Kunjungan Dinas"
       },
       {
-        "src": "src/img/galery/dinas/02.jpeg",
+        "src": "src/img/galery/dinas/02.webp",
         "alt": "Kunjungan Dinas",
         "category": "Kunjungan Dinas"
       },
       {
-        "src": "src/img/galery/pelayanan/01.jpeg",
+        "src": "src/img/galery/pelayanan/01.webp",
         "alt": "Gedung Lapas",
         "category": "Pelayanan Publik"
       },
       {
-        "src": "src/img/galery/pelayanan/02.jpeg",
+        "src": "src/img/galery/pelayanan/02.webp",
         "alt": "Gedung Lapas",
         "category": "Pelayanan Publik"
       },
       {
-        "src": "src/img/galery/pelayanan/03.jpeg",
+        "src": "src/img/galery/pelayanan/03.webp",
         "alt": "Gedung Lapas",
         "category": "Pelayanan Publik"
       },
       {
-        "src": "src/img/galery/sosial/01.jpeg",
+        "src": "src/img/galery/sosial/01.webp",
         "alt": "Gedung Modern",
         "category": "Kegiatan Sosial"
       },
       {
-        "src": "src/img/galery/sosial/02.jpeg",
+        "src": "src/img/galery/sosial/02.webp",
         "alt": "Gedung Modern",
         "category": "Kegiatan Sosial"
       },
       {
-        "src": "src/img/galery/sosial/02.jpeg",
+        "src": "src/img/galery/sosial/02.webp",
         "alt": "Gedung Modern",
         "category": "Kegiatan Sosial"
       }
