@@ -1,12 +1,12 @@
 {
   "site": {
     "title": "Lapas Narkotika Jayapura",
-    "subtitle": "KEMENKUMHAM RI",
+    "subtitle": "IMIPAS RI",
     "tagline": "Mewujudkan Pemasyarakatan yang PASTI dan Berintegritas",
-    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2007, Lapas ini memiliki kapasitas 308 orang, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
+    "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2008, Lapas ini memiliki kapasitas 308 orang, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
     "footerDesc": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura — Mewujudkan pemasyarakatan yang PASTI dan berintegritas.",
-    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil Kemenkumham Papua. All rights reserved.",
-    "copyrightSub": "Direktorat Jenderal Pemasyarakatan — Kementerian Hukum dan HAM RI"
+    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil Kemenipas Papua. All rights reserved.",
+    "copyrightSub": "Direktorat Jenderal Pemasyarakatan — Kemenipas RI"
   },
   "nav": [
     { "label": "Beranda", "href": "#beranda" },
@@ -19,7 +19,7 @@
     { "label": "Kontak", "href": "#kontak" }
   ],
   "hero": {
-    "badge": "Kementerian Hukum dan HAM RI",
+    "badge": "IMIPAS RI",
     "title": "Lapas Narkotika",
     "titleHighlight": "Jayapura",
     "tagline": "Mewujudkan Pemasyarakatan yang",
@@ -30,7 +30,7 @@
     "ctaSecondary": { "label": "Hubungi Kami", "href": "#kontak" },
     "heroBadgeLabel": "KOMITMEN KAMI",
     "heroBadgeText": "Pemasyarakatan PASTI",
-    "heroImage": "https://images.pexels.com/photos/35398997/pexels-photo-35398997.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200"
+    "heroImage": "src/img/hero.jpeg"
   },
   "stats": [
     {
@@ -67,16 +67,16 @@
     "title": "Profil Lapas Narkotika",
     "titleHighlight": "Kelas IIA Jayapura",
     "paragraphs": [
-      "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura merupakan unit pelaksana teknis di bawah Kementerian Hukum dan HAM Republik Indonesia. Berdiri sejak tahun 2007, kami berperan strategis dalam pembinaan, rehabilitasi, dan reintegrasi sosial bagi warga binaan pemasyarakatan tindak pidana narkotika di wilayah Papua.",
-      "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, dengan kapasitas tampung 308 orang, mayoritas kasus narkotika jenis ganja. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
+      "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura merupakan unit pelaksana teknis di bawah Kemenipas Republik Indonesia. Disahkan sejak tahun 2008, kami berperan strategis dalam pembinaan dan rehabilitasi sosial bagi warga binaan pemasyarakatan tindak pidana narkotika di wilayah Papua.",
+      "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
     ],
     "images": [
-      "https://images.pexels.com/photos/4328661/pexels-photo-4328661.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=700",
-      "https://images.pexels.com/photos/35398997/pexels-photo-35398997.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=500",
-      "https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=400&w=400"
+      "src/img/profile/01.jpeg",
+      "src/img/profile/02.jpeg",
+      "src/img/profile/03.jpeg"
     ],
     "infoCards": [
-      { "icon": "calendar", "label": "BERDIRI", "value": "Sejak 2007" },
+      { "icon": "calendar", "label": "DISAHKAN", "value": "Sejak 2008" },
       { "icon": "file", "label": "DASAR HUKUM", "value": "UU No. 12/1995" },
       { "icon": "globe", "label": "WILAYAH", "value": "Provinsi Papua" }
     ]
@@ -85,27 +85,22 @@
     "sectionLabel": "ARAH STRATEGIS",
     "title": "Visi &",
     "titleHighlight": "Misi",
-    "visi": "\"Menjadi Lembaga Pemasyarakatan Narkotika yang Akuntabel, Transparan, dan Profesional, sebagai bagian dari kepastian penegakan hukum yang memberi perlindungan kepada hak warga binaan.\"",
+    "visi": "\"Dukungan untuk Terapi, Kemanusiaan dan Kemitraan (Teraphy, Support, Humanity and Partnership)\"",
     "misi": [
       {
         "label": "MISI 1",
         "icon": "home",
-        "text": "Menyelenggarakan pembinaan kepribadian dan kemandirian warga binaan secara terprogram dan berkesinambungan."
+        "text": "Membangun kedisiplinan dan kebersamaan Petugas (Discipline by Together Development for officer)"
       },
       {
         "label": "MISI 2",
         "icon": "heart",
-        "text": "Melaksanakan program rehabilitasi medis dan sosial bagi warga binaan kasus narkotika secara komprehensif."
+        "text": "Program terapi untuk perubahan perilaku dan Pendidikan kepribadian (Teraphy Program for Behavior Change and Personality Education)"
       },
       {
         "label": "MISI 3",
         "icon": "users",
-        "text": "Meningkatkan kualitas pelayanan publik yang transparan, akuntabel, dan bebas dari praktik korupsi."
-      },
-      {
-        "label": "MISI 4",
-        "icon": "activity",
-        "text": "Memperkuat reformasi birokrasi dan tata kelola organisasi yang adaptif dan berkelanjutan."
+        "text": "Membangun kemitraan untuk keterbukaan peran masyarakat (Partnership Development for Open Society Support)"
       }
     ]
   },
@@ -137,12 +132,6 @@
         "icon": "heart",
         "title": "Rehabilitasi",
         "desc": "Program rehabilitasi medis dan sosial untuk pemulihan WBP narkotika.",
-        "highlight": false
-      },
-      {
-        "icon": "refresh",
-        "title": "Reintegrasi Sosial",
-        "desc": "Program asimilasi dan integrasi sosial warga binaan ke masyarakat.",
         "highlight": false
       },
       {
@@ -185,7 +174,7 @@
       },
       {
         "icon": "dollar",
-        "tag": "ANTI KKN",
+        "tag": "ANTI HALINAR",
         "title": "Komitmen Anti Korupsi",
         "desc": "Pakta integritas dan zero tolerance terhadap praktik korupsi, kolusi, dan nepotisme."
       },
@@ -207,47 +196,51 @@
     "title": "Struktur",
     "titleHighlight": "Organisasi",
     "pimpinan": {
-      "inisial": "JEM",
       "nama": "Jimreves Engel Stender Muloke",
       "jabatan": "Kepala Lapas Narkotika Kelas IIA Jayapura",
+      "photo": "src/img/cards/kalapas.webp",
       "deskripsi": "Memimpin Lapas Narkotika Jayapura dengan komitmen pada pelayanan publik prima, integritas, dan reformasi birokrasi berkelanjutan. Berdasarkan berita online, nama ini tercantum sebagai Kepala Lapas Narkotika Jayapura pada tahun 2025."
     },
     "struktural": [
       {
-        "inisial": "BW",
-        "nama": "Basuki Wijoyo, S.H., M.H.",
-        "jabatan": "Kasubag Tata Usaha"
+        "nama": "Irwanto Talantan, S.Kom.",
+        "jabatan": "Kepala Seksi Administrasi KAMTIB",
+        "photo": "src/img/cards/irwanto.webp"
       },
       {
-        "inisial": "YW",
-        "nama": "Yohanes Wakum, S.Sos.",
-        "jabatan": "Kasi Pembinaan Narapidana"
+        "nama": "Deni Zora Artamai, S.H., M.H.",
+        "jabatan": "Kepala Kesetuan Pengamanan Lembaga Pemasyarakatan",
+        "photo": "src/img/cards/deni.webp"
       },
       {
-        "inisial": "MR",
-        "nama": "Marlina Rumlawang, S.Psi.",
-        "jabatan": "Kasi Kegiatan Kerja"
+        "nama": "Isak Samuel Korwa, A.Md.IP.",
+        "jabatan": "Kepala Seksi Kegiatan Kerja",
+        "photo": "src/img/cards/isak.webp"
       },
       {
-        "inisial": "BH",
-        "nama": "Letkol (Purn) Banu Hasan",
-        "jabatan": "Kasi Administrasi Keamanan"
+        "nama": "Feleks Kusaly, S.H.,M.H.",
+        "jabatan": "Kepala Sub Bagian Tata Usaha",
+        "photo": "src/img/cards/feleks.webp"
       },
       {
-        "inisial": "RN",
-        "nama": "Rini Novitasari, S.K.M.",
-        "jabatan": "Kasi Kesehatan & Perawatan"
-      },
-      { "inisial": "DW", "nama": "Dedi Wibowo, S.Sos.", "jabatan": "Ka. KPLP" },
-      {
-        "inisial": "FS",
-        "nama": "Fitri Susanti, S.E.",
-        "jabatan": "Pengelola Keuangan"
+        "nama": "Nur Sriyati, S.H.",
+        "jabatan": "Kepala Subsi Bimbingan Kemasyarakatan dan Perawatan",
+        "photo": "src/img/cards/nur.webp"
       },
       {
-        "inisial": "HM",
-        "nama": "Haris Maulana, A.Md.",
-        "jabatan": "Pengelola Registrasi"
+        "nama": "Irianto Malong, S.H.",
+        "jabatan": "Kepala Subsi Keamanan",
+        "photo": "src/img/cards/malong.webp"
+      },
+      {
+        "nama": "Yarmanto Pasulle, S.H.",
+        "jabatan": "Kepala Subsi Laporan dan Tata Tertib",
+        "photo": "src/img/cards/yarmanto.webp"
+      },
+      {
+        "nama": "Beby Diana Sapulette, S.Sos.",
+        "jabatan": "Kepala Urusan Umum",
+        "photo": "src/img/cards/beby.webp"
       }
     ]
   },
@@ -261,38 +254,87 @@
       "Kegiatan Pembinaan",
       "Pelayanan Publik",
       "Kegiatan Pegawai",
-      "Rehabilitasi",
       "Kunjungan Dinas",
       "Kegiatan Sosial"
     ],
     "items": [
       {
-        "src": "https://images.pexels.com/photos/35398997/pexels-photo-35398997.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
-        "alt": "Upacara Bendera",
+        "src": "src/img/galery/pembinaan/01.jpeg",
+        "alt": "Kegiatan Pembinaan",
         "category": "Kegiatan Pembinaan"
       },
       {
-        "src": "https://images.pexels.com/photos/31282368/pexels-photo-31282368.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=400",
+        "src": "src/img/galery/pembinaan/02.jpeg",
+        "alt": "Kegiatan Pembinaan",
+        "category": "Kegiatan Pembinaan"
+      },
+      {
+        "src": "src/img/galery/pembinaan/03.jpeg",
+        "alt": "Kegiatan Pembinaan",
+        "category": "Kegiatan Pembinaan"
+      },
+      {
+        "src": "src/img/galery/pegawai/01.jpeg",
         "alt": "Petugas Lapas",
         "category": "Kegiatan Pegawai"
       },
       {
-        "src": "https://images.pexels.com/photos/14040412/pexels-photo-14040412.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
-        "alt": "Parade Budaya",
-        "category": "Kegiatan Pembinaan"
+        "src": "src/img/galery/pegawai/02.jpeg",
+        "alt": "Petugas Lapas",
+        "category": "Kegiatan Pegawai"
       },
       {
-        "src": "https://images.pexels.com/photos/32307825/pexels-photo-32307825.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
+        "src": "src/img/galery/pegawai/03.jpeg",
+        "alt": "Petugas Lapas",
+        "category": "Kegiatan Pegawai"
+      },
+      {
+        "src": "src/img/galery/pegawai/04.jpeg",
+        "alt": "Petugas Lapas",
+        "category": "Kegiatan Pegawai"
+      },
+      {
+        "src": "src/img/galery/dinas/01.jpeg",
         "alt": "Kunjungan Dinas",
         "category": "Kunjungan Dinas"
       },
       {
-        "src": "https://images.pexels.com/photos/539746/pexels-photo-539746.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
+        "src": "src/img/galery/dinas/02.jpeg",
+        "alt": "Kunjungan Dinas",
+        "category": "Kunjungan Dinas"
+      },
+      {
+        "src": "src/img/galery/dinas/02.jpeg",
+        "alt": "Kunjungan Dinas",
+        "category": "Kunjungan Dinas"
+      },
+      {
+        "src": "src/img/galery/pelayanan/01.jpeg",
         "alt": "Gedung Lapas",
         "category": "Pelayanan Publik"
       },
       {
-        "src": "https://images.pexels.com/photos/4328661/pexels-photo-4328661.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=700",
+        "src": "src/img/galery/pelayanan/02.jpeg",
+        "alt": "Gedung Lapas",
+        "category": "Pelayanan Publik"
+      },
+      {
+        "src": "src/img/galery/pelayanan/03.jpeg",
+        "alt": "Gedung Lapas",
+        "category": "Pelayanan Publik"
+      },
+      {
+        "src": "src/img/galery/sosial/01.jpeg",
+        "alt": "Gedung Modern",
+        "category": "Kegiatan Sosial"
+      },
+      {
+        "src": "src/img/galery/sosial/02.jpeg",
+        "alt": "Gedung Modern",
+        "category": "Kegiatan Sosial"
+      },
+      {
+        "src": "src/img/galery/sosial/02.jpeg",
         "alt": "Gedung Modern",
         "category": "Kegiatan Sosial"
       }
@@ -312,20 +354,12 @@
         "answer": "Syarat PB meliputi: telah menjalani 2/3 masa pidana, berkelakuan baik selama 9 bulan terakhir, telah membayar denda/uang pengganti, memiliki jaminan dari keluarga, dan tidak sedang menjalani pidana lain. Pengajuan dilakukan melalui Kasi Pembinaan Narapidana dengan melengkapi berkas administrasi yang diperlukan."
       },
       {
-        "question": "Bagaimana cara mendapatkan informasi mengenai warga binaan?",
-        "answer": "Informasi warga binaan dapat diperoleh melalui loket pelayanan informasi publik Lapas atau melalui sistem informasi pemasyarakatan (SDP) yang dapat diakses secara online. Pemohon wajib menunjukkan identitas diri dan menyertakan surat kuasa jika mewakili pihak lain."
-      },
-      {
         "question": "Bagaimana cara menyampaikan pengaduan atau laporan?",
         "answer": "Pengaduan dapat disampaikan melalui: kotak pengaduan di lobi Lapas, email resmi lapas, telepon layanan pengaduan, atau melalui aplikasi LAPOR! (Layanan Aspirasi dan Pengaduan Online Rakyat). Setiap pengaduan akan diproses dalam 14 hari kerja dan mendapat respons tertulis."
       },
       {
         "question": "Apakah ada biaya untuk layanan publik di Lapas?",
         "answer": "Seluruh layanan publik di Lapas Narkotika Jayapura tidak dipungut biaya (gratis) sesuai dengan prinsip zona integritas dan komitmen anti korupsi. Apabila ada oknum yang meminta imbalan, segera laporkan kepada Kepala Lapas atau melalui saluran pengaduan resmi."
-      },
-      {
-        "question": "Apa saja program rehabilitasi yang tersedia?",
-        "answer": "Program rehabilitasi yang tersedia meliputi: rehabilitasi medis (detoksifikasi), rehabilitasi sosial (konseling individu dan kelompok), program vokasional (keterampilan kerja), pendidikan keagamaan, dan program reintegrasi sosial. Semua program dijalankan berkolaborasi dengan Kementerian Kesehatan dan BNN."
       }
     ]
   },
@@ -346,12 +380,12 @@
       {
         "icon": "phone",
         "label": "Telepon",
-        "lines": ["(0967) 591-234", "Fax: (0967) 591-235"]
+        "lines": ["0856 5732 9172"]
       },
       {
         "icon": "mail",
         "label": "Email",
-        "lines": ["kanwilpapua@kemenkum.go.id"]
+        "lines": ["lapasnarkotikajyp@gmail.com"]
       },
       {
         "icon": "clock",
