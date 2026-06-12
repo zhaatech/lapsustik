@@ -223,6 +223,11 @@
         "photo": "src/img/cards/feleks.webp"
       },
       {
+        "inisial": "IA",
+        "nama": "Ilham Abdullah, S.H.",
+        "jabatan": "Kepala Seksi Bimbingan Napi / Anak Didik"
+      },
+      {
         "nama": "Nur Sriyati, S.H.",
         "jabatan": "Kepala Subsi Bimbingan Kemasyarakatan dan Perawatan",
         "photo": "src/img/cards/nur.webp"
@@ -241,11 +246,6 @@
         "nama": "Beby Diana Sapulette, S.Sos.",
         "jabatan": "Kepala Urusan Umum",
         "photo": "src/img/cards/beby.webp"
-      },
-      {
-        "inisial": "IA",
-        "nama": "Ilham Abdullah, S.H.",
-        "jabatan": "Kepala Seksi Bimbingan Napi / Anak Didik"
       },
       {
         "inisial": "MS",
