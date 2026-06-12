@@ -1,12 +1,12 @@
 {
   "site": {
     "title": "Lapas Narkotika Jayapura",
-    "subtitle": "KEMENIMIPAS RI",
+    "subtitle": "KEMENIPAS RI",
     "tagline": "Mewujudkan Pemasyarakatan yang PASTI dan Berintegritas",
     "description": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura, Papua. Berdiri sejak tahun 2008, Lapas ini memiliki kapasitas 308 orang, mayoritas kasus narkotika jenis ganja. Lapas berkomitmen menjalankan tugas pembinaan, rehabilitasi, dan reintegrasi sosial dengan menjunjung tinggi integritas, transparansi, dan pelayanan publik prima.",
     "footerDesc": "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura — Mewujudkan pemasyarakatan yang PASTI dan berintegritas.",
-    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil Kemenimipas Papua. All rights reserved.",
-    "copyrightSub": "Direktorat Jenderal Pemasyarakatan — KEMENIMIPAS RI"
+    "copyright": "© 2025 Lapas Narkotika Kelas IIA Jayapura. Kanwil KEMENIPAS Papua. All rights reserved.",
+    "copyrightSub": "Direktorat Jenderal Pemasyarakatan — Kemenipas RI"
   },
   "nav": [
     { "label": "Beranda", "href": "#beranda" },
@@ -20,7 +20,7 @@
   ],
   "hero": {
     "badge": "Kementrian Imigrasi dan Pemasyarakatan Republik Indonesia",
-    "title": "Lapas Narkotika",
+    "title": "Lapas Narkotika Kelas IIA",
     "titleHighlight": "Jayapura",
     "tagline": "Mewujudkan Pemasyarakatan yang",
     "taglineHighlight": "PASTI",
@@ -67,7 +67,7 @@
     "title": "Profil Lapas Narkotika",
     "titleHighlight": "Kelas IIA Jayapura",
     "paragraphs": [
-      "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura merupakan unit pelaksana teknis di bawah KEMENIMIPAS Republik Indonesia. Disahkan sejak tahun 2008, kami berperan strategis dalam pembinaan dan rehabilitasi sosial bagi warga binaan pemasyarakatan tindak pidana narkotika di wilayah Papua.",
+      "Lembaga Pemasyarakatan Narkotika Kelas IIA Jayapura merupakan unit pelaksana teknis di bawah Kemenipas Republik Indonesia. Disahkan sejak tahun 2008, kami berperan strategis dalam pembinaan dan rehabilitasi sosial bagi warga binaan pemasyarakatan tindak pidana narkotika di wilayah Papua.",
       "Berlokasi di Doyo Baru, Distrik Waibu, Kabupaten Jayapura. Kami mengoperasikan sistem keamanan terintegrasi dan program pembinaan berbasis kompetensi untuk memastikan setiap warga binaan dapat kembali ke masyarakat sebagai individu yang produktif, mandiri, dan bertanggung jawab."
     ],
     "images": [
@@ -234,7 +234,7 @@
       },
       {
         "nama": "Yarmanto Pasulle, S.H.",
-        "jabatan": "Kepala Subsi Laporan dan Tata Tertib",
+        "jabatan": "Kepala Subsi Pelaporan dan Tata Tertib",
         "photo": "src/img/cards/yarmanto.webp"
       },
       {
@@ -249,7 +249,7 @@
       },
       {
         "inisial": "MS",
-        "nama": "Muhammad Subchan, S.H.",
+        "nama": "Mohamad Subchan, S.H.",
         "jabatan": "Kepala Subsi Registrasi"
       },
       {
@@ -329,7 +329,7 @@
         "category": "Kunjungan Dinas"
       },
       {
-        "src": "src/img/galery/dinas/02.webp",
+        "src": "src/img/galery/dinas/03.webp",
         "alt": "Kunjungan Dinas",
         "category": "Kunjungan Dinas"
       },
@@ -359,7 +359,7 @@
         "category": "Kegiatan Sosial"
       },
       {
-        "src": "src/img/galery/sosial/02.webp",
+        "src": "src/img/galery/sosial/03.webp",
         "alt": "Gedung Modern",
         "category": "Kegiatan Sosial"
       }
